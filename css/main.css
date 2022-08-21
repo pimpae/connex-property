@@ -942,6 +942,11 @@ footer .bot-menu span{
   margin-bottom: 10px;
 }
 
+
+
+
+
+
 /* transition: .33s all ease-out;  */
    
 /* 
@@ -972,6 +977,40 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
  
 @media only screen and (max-width: 991px) { /* MOBILE */ 
+  nav{ 
+    z-index: 111;
+  }
+  .navbar-collapse{
+    margin-top: 20px;
+  }
+  .navbar{
+    padding: 20px 5px !important;
+  }
+  .navbar-nav{
+    background-color: #fff;
+    z-index: 111;
+  }
+  header nav .navbar-nav .nav-item .nav-link {
+    font-size: 18px;
+    height: 40px;
+    line-height: 28px;
+  }
+  header nav .navbar-nav .nav-item .nav-link.btn-tha{
+    width: 100px;
+  }
+  .navbar-collapse .justify-content-end{
+    display: flex;
+    flex-direction: unset !important;
+    padding-left: 0px;
+    justify-content: start !important;
+  }
+  .navbar-collapse .justify-content-end li{
+    width: 60px !important; 
+  }
+  .navbar-collapse .justify-content-end li.nav-item{
+    width: 160px !important; 
+    margin-top: 10px;
+  }
   header{
     padding-left: 15px;
     padding-right: 15px;
@@ -989,7 +1028,11 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     height: 35px;
   } 
   footer{ 
-    padding: 25px 20px;
+    padding: 25px 20px 45px;
+  }
+  footer .bot-menu span{ 
+    float: left;
+    margin-top: 10px;
   }
   footer .container-fluid .row div{
     width: 100%;
@@ -1059,8 +1102,7 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   .sec-home4 h3{
     font-size: 15px; 
     line-height: 25px; 
-  }
-  
+  } 
   .sec-home6{
     height: unset; 
     background-size: auto 100% !important;
@@ -1076,16 +1118,125 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     font-size: 15px; 
     line-height: 25px; 
   }
+  
+  .sec-home7{
+    height: unset; 
+    background-size: auto 100% !important;
+  }
+  .sec-home7 > div{ 
+    padding: 30px 20px;
+  }
+  .sec-home7 h1{
+    font-size: 24px; 
+    line-height: 35px; 
+  }
+  .sec-home7 h3{
+    font-size: 15px; 
+    line-height: 25px; 
+  }
+  .sec-home8{
+    height: unset; 
+    background-size: auto 100% !important;
+  }
+  .sec-home8 > div{ 
+    padding: 30px 20px;
+  }
+  .sec-home8 h1{
+    font-size: 24px; 
+    line-height: 35px; 
+    margin-top: 20px;
+  }
+  .sec-home8 h3{
+    font-size: 15px; 
+    line-height: 25px; 
+  }
+  .sec-home8 .mb-5{
+    margin-bottom: 20px !important;
+  } 
+  .sec-home9{
+    height: unset; 
+    background-size: auto 100% !important;
+  }
+  .sec-home9 > div{ 
+    padding: 30px 20px;
+  }
+  .sec-home9 h1{
+    font-size: 20px; 
+    line-height: 35px; 
+    margin-top: 20px;
+  } 
+  .testimonial{
+    margin-left: 5px;
+    width: 295px;
+    height: 240px;
+  }
+  .testimonial img{  
+    position: relative !important;
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .testimonial h4{ 
+    padding-left: 20px !important;
+  }
+  .testimonial h6{ 
+    margin-left: 20px !important;
+  }
+  
+  .sec-home10{
+    height: unset; 
+    background-size: auto 100% !important;
+  }
+  .sec-home10 > div{ 
+    padding: 30px 20px;
+  }
+  .sec-home10 h1{
+    font-size: 22px; 
+    line-height: 35px; 
+    margin-top: 20px;
+  }
+  .sec-home10 h3{
+    font-size: 15px; 
+    line-height: 25px; 
+  } 
+
+  .owlm2 .owl-prev{
+    position: absolute;
+    left: 0;
+    top: unset !important;
+    bottom: 0;
+    margin-bottom: -10px !important;
+  }
+  .owlm2 .owl-next{
+    position: absolute;
+    left: 0;
+    margin-left: 40px !important;
+    top: unset !important;
+    bottom: 0;
+    margin-bottom: -10px !important;
+  }
 
 
 
 
-
-
-
+  .our-ser .icon-ser {
+    width: 50px;
+    height: 50px;
+  }
+  .our-ser h4{
+    font-family: SukhumvitSet-Bold;
+    font-size: 18px;
+    line-height: 28px; 
+  }
+  .our-ser p{
+    font-family: SukhumvitSet-Bold;
+    font-size: 12px;
+    line-height: 28px; 
+  }
   
   .condo-card{
-    width: 296px;
+    width: 316px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .owlm .owl-nav div{
     width: 50px !important;
@@ -1109,6 +1260,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     height: 40px;
     font-size: 14px;
     padding-right: 85px;
+    z-index: 2;
+    position: relative;
   }
   .sec-home1 form .btn{
     height: 40px;
@@ -1117,7 +1270,25 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     width: 80px;
   }
   .btn-yellow {
+    margin-top: 10px;
     width: 200px;
+    font-size: 15px;
+  }
+  .btn-yellow2{
+    top: unset;
+    bottom: 0 !important;
+    margin-right: 20px;
+    margin-bottom: -10px;
+  }
+  .sec-home10 .mt-5{ 
+    margin-top: 5px !important; 
+  }
+  .sec-home10 .row .col{
+    width: 100%;
+    flex-basis: unset !important;
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
   }
 }
 
