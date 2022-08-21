@@ -1176,7 +1176,7 @@ footer .bot-menu span{
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: 9.55px 19.1px auto !important;
-
+  z-index: 11;
 }
 .map-arr.active{ 
   background: url(../images/right_.png) #4383DF; 
@@ -1188,7 +1188,152 @@ footer .bot-menu span{
 .category-sec .numx.active{
   order: 3;
 }
- 
+.main-bg{
+  background: #E5E5E5;
+  padding-bottom: 45px;
+}
+iframe{
+  border-radius: 10px;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1));
+}
+.h11{
+  font-family: SukhumvitSet-Bold;    
+  font-size: 44px;
+  line-height: 70px; 
+  text-align: center; 
+  color: #374757;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.contact-user{
+  height: 377px;  
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact-user .user{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.contact-user .user img{
+  border-radius: 100%;
+  width: 171px;
+  height: 171px;
+}
+.contact-user .user h4{ 
+  font-family: SukhumvitSet-Bold;    
+  font-size: 20px;
+  line-height: 24px;  
+  color: #222222;
+  margin-top: 20px;
+} 
+.contact-user .user h5{
+  font-family: SukhumvitSet-Light;    
+  font-size: 16px;
+  line-height: 19px; 
+  color: #222222;
+}
+.contact-user .user h6 a{
+  font-family: SukhumvitSet-Light;    
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center; 
+  color: #222222;
+  margin-top: 20px;
+}
+
+.contact-user .user h6 img{
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+} 
+
+.contact-main{
+  height: 641px;  
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  padding: 35px;
+}
+.contact-main form h3{
+  font-family: SukhumvitSet-Bold;   
+  font-size: 22px;
+  line-height: 35px;  
+  color: #222222;
+
+}
+
+.contact-main form input{
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  height: 44px;
+  margin-top: 16px;
+  font-family: SukhumvitSet-Thin;   
+  font-size: 20px;
+  line-height: 23px; 
+  color: #979797; 
+}
+.contact-main form textarea{
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  height: 105px;
+  margin-top: 16px;
+  font-family: SukhumvitSet-Thin;   
+  font-size: 20px;
+  line-height: 23px; 
+  color: #979797;
+}
+.contact-main form button{
+  margin-top: 16px;
+  height: 44px; 
+  font-family: SukhumvitSet-Thin;   
+  background: #1F4D8E;
+  border-radius: 4px;
+  width: 100%;
+  color: #fff;
+  transition: .33s all ease-out;
+}
+.contact-main form button:hover{
+  background: #5681BF;
+  color: #fff;
+} 
+.contact-description h3{
+  font-family: SukhumvitSet-Bold;   
+  font-size: 22px;
+  line-height: 35px;  
+  color: #222222; 
+}
+.contact-description h4{
+  font-family: SukhumvitSet-Thin;   
+  font-size: 20px;
+  line-height: 24px; 
+  color: #222222; 
+}
+.contact-description h5{
+  position: relative;
+  font-family: SukhumvitSet-Light;   
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222; 
+  padding-left: 34px;
+}
+.contact-description h5 img{
+  position: absolute;
+  left: 0;
+}
+
+
+
+
+
 /* transition: .33s all ease-out;  */
    
 /* 
@@ -1219,6 +1364,37 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
  
 @media only screen and (max-width: 991px) { /* MOBILE */ 
+  .h11 { 
+    font-size: 34px;
+    line-height: 50px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .contact-main form button{
+    margin-bottom: 30px;
+  }
+  .contact-main{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    height: unset;
+  }
+  .contact-main .pr-5{
+    padding-right: 15px !important;
+  }
+  .contact-main .pl-5{
+    padding-left: 15px !important;
+  }
+  .contact-user .user img{
+    width: 100px;
+    height: 100px;
+  }
+  .contact-user{ 
+    display: block; 
+    height: unset;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   .category-sec .col-xl-8 > .row > div{
     flex-basis: unset !important;
     margin-bottom: 10px;
