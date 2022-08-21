@@ -1019,8 +1019,7 @@ footer .bot-menu span{
   font-family: SukhumvitSet-Bold;  
   font-size: 14px;
   line-height: 26px;  
-  color: #374757;
-
+  color: #374757; 
 }
 .dropdown-menu .dropdown-item span{
   font-family: SukhumvitSet-Bold;   
@@ -1033,6 +1032,8 @@ footer .bot-menu span{
   border: 1px solid #979797;
   border-radius: 10px;
 }
+
+
 .category-sec label{
   font-family: SukhumvitSet-Bold;   
   font-size: 14px;
@@ -1268,7 +1269,17 @@ iframe{
   color: #222222;
 
 }
-
+.contact-main form select{
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  height: 44px;
+  margin-top: 16px;
+  font-family: SukhumvitSet-Thin;   
+  font-size: 20px;
+  line-height: 23px; 
+  color: #979797; 
+}
 .contact-main form input{
   background: #FFFFFF;
   border: 1px solid #DADADA;
@@ -1331,8 +1342,216 @@ iframe{
 }
 
 
+.benefits{
+  background: url(../images/bgb.png) ,#374757;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto; 
+  background-blend-mode: luminosity; 
+}
+.benefits > div{
+  padding-top: 30px;
+  height: 594px;  
+} 
+.benefits h1{
+  font-family: SukhumvitSet-Medium;
+  font-size: 44px;
+  line-height: 50px; 
+  color: #FFB800;
+} 
 
+.benefits h3{
+  font-family: SukhumvitSet-Medium; 
+  font-size: 24px;
+  line-height: 29px; 
+  color: #FFFFFF;
+} 
+.bene-box{ 
+  height: 124px;  
+  background: rgba(0, 0, 0, 0.39);
+  border-radius: 6px;
+  margin-top: 12px;
+  padding: 15px 35px 15px 15px;
+  position: relative;
+} 
+.bene-box h4{ 
+  font-family: SukhumvitSet-Medium; 
+  font-size: 20px;
+  line-height: 24px; 
+  color: #FFFFFF; 
+  padding-left: 142px;
+}
+.bene-box h5{ 
+  font-family: SukhumvitSet-Medium; 
+  font-size: 16px;
+  line-height: 19px; 
+  color: #FFFFFF; 
+  padding-left: 142px;
+}
+.bene-box > div{ 
+  position: absolute;
+  border-radius: 100%;
+  width: 87px;
+  height: 87px; 
+  background: #F8F9FA;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+} 
+.form-dep{
+  background: #E5E5E5;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.form-dep .dep-box{
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 38px 45px;
+}
+.form-dep .dep-box h1{
+  font-family: SukhumvitSet-Bold; 
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 15px;
+} 
+.form-dep .dep-box form textarea{
+  font-family: SukhumvitSet-Thin; 
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 23px; 
+  color: #979797;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px; 
+  height: 129px;   
+}
+.form-dep .dep-box form input{
+  font-family: SukhumvitSet-Thin; 
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 23px; 
+  color: #979797;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  height: 44px; 
+}
+.form-dep .dep-box form label{ 
+  font-family: SukhumvitSet-Bold; 
+  font-size: 20px;
+  line-height: 23px; 
+  color: #374757; 
+}
+.form-dep .dep-box form h3{ 
+  margin-top: 50px;
+  font-family: SukhumvitSet-Bold; 
+  font-size: 24px;
+  line-height: 29px; 
+  color: #222222;
+  margin-bottom: 20px;
+}
 
+.form-dep .dep-box form .bootstrap-select{ 
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.form-dep .dep-box form .bootstrap-select .btn{
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  height: 44px; 
+}
+.form-dep .dep-box form .bootstrap-select .btn:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+.form-dep .dep-box form .bootstrap-select .btn .filter-option-inner-inner{
+  font-family: SukhumvitSet-Bold;  
+  font-size: 14px;
+  line-height: 26px;  
+  color: #374757; 
+}
+
+.drop-zone { 
+  height: 129px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: SukhumvitSet-Bold;   
+  font-size: 20px;
+  cursor: pointer;
+  color: #979797;
+  border: 2px dashed #5681BF; 
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+} 
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+} 
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+} 
+.form-dep .dep-box form h6{  
+  font-family: SukhumvitSet-Bold;  
+  font-size: 16px;
+  line-height: 19px; 
+  color: #222222;
+}
+.form-dep .dep-box form h6 a{   
+  color: #FFB800;
+}
+.boxg{
+  height: 129px; 
+  background: #F5F5F5;
+  border-radius: 4px;
+  padding-top: 17px;
+  font-size: 16px;
+  line-height: 32px; 
+  font-family: SukhumvitSet-Thin;  
+  color: #979797;
+}
+
+.form-dep .dep-box form .btn{
+  font-family: SukhumvitSet-Bold;   
+  height: 43px;  
+  width: 315px;
+  background: #1F4D8E;
+  border-radius: 4px;
+  background: #1F4D8E;
+  border-radius: 4px; 
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center; 
+  color: #FFFFFF;
+}
 
 /* transition: .33s all ease-out;  */
    
@@ -1364,6 +1583,44 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
  
 @media only screen and (max-width: 991px) { /* MOBILE */ 
+  .benefits{ 
+    background-size: auto 100% !important;   
+  }
+  .benefits > div{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: unset;  
+  }  
+  .benefits .pr-4{
+    padding-right: 15px !important;
+  }
+  .benefits .pl-4{
+    padding-left: 15px !important;
+  } 
+  .benefits h1 {
+    font-size: 36px;
+  }
+  .benefits h3 {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .benefits .bene-box{
+    padding-right: 15px;
+    height: unset;
+    padding-bottom: 5px;
+  }
+  .benefits .bene-box div{
+    width: 60px;
+    height: 60px;
+  }
+  .benefits .bene-box h4{
+    padding-left: 80px;
+  }
+  .benefits .bene-box h5{
+    padding-left: 80px;
+    font-size: 11px;
+    line-height: 17px;
+  }
   .h11 { 
     font-size: 34px;
     line-height: 50px; 
@@ -1754,6 +2011,40 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   .category-sec .numx{
     order: 3;
   }
+  .form-dep .dep-box h1 { 
+    font-size: 28px; 
+  }
+  .form-dep .dep-box{ 
+    padding: 25px 25px;
+  }
+  .form-dep .custom-control { 
+    margin-right: 1rem !important;
+  }
+  .form-dep .dep-box form input {
+    font-size: 17px;
+  }
+  .form-dep .dep-box form h3{
+    margin-top: 30px;
+  }
+  .form-dep .dep-box form label {
+    font-size: 17px;
+  }
+  .form-dep .dep-box form h6 {
+    font-size: 12px;
+  }
+  .boxg {
+    height: unset;
+    background: #F5F5F5;
+    border-radius: 4px;
+    padding-top: 17px;
+    padding-bottom: 1px;
+    font-size: 12px;
+    line-height: 26px; 
+  }
+  .form-dep .dep-box form .btn{ 
+    width: 100%;  
+  }
+  
 }  
 @media only screen and (width: 1024px) { /* IPAD PRO */  
   .map-arr{ 
@@ -1766,6 +2057,29 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   }
   .category-sec .numx{
     order: 3;
+  } 
+  .benefits > div{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: unset;  
+  }  
+  .benefits .pr-4{
+    padding-right: 15px !important;
+  }
+  .benefits .pl-4{
+    padding-left: 15px !important;
+  } 
+  .benefits { 
+    background-size: auto 100%  !important; 
+  }
+  .bene-box{
+    height: unset;
+  }
+  .contact-main{
+    height: unset;
+  }
+  .contact-description h3{
+    margin-top: 35px;
   }
 }
 
