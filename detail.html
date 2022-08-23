@@ -10,9 +10,7 @@
     <link rel="icon" type="image/x-icon" href="images/logo-1.png"> 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>  
     <title> Connex Property </title> 
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+ 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
 
 </head>
@@ -343,26 +341,27 @@
 							<div class="col-xl-12">
 								<div class="row">
 									<div class="col-xl-4 room-feature">
-										<img src="images/rr1.png" alt="">Communal Pool 
+										<img src="images/pp1.png" alt="">Communal Pool 
 									</div>
 									<div class="col-xl-4 room-feature">
-										<img src="images/rr2.png" alt="">Communal Gym
+										<img src="images/pp2.png" alt="">Communal Gym
 									</div>
 									<div class="col-xl-4 room-feature">
-										<img src="images/rr3.png" alt="">24H Security
+										<img src="images/pp3.png" alt="">24H Security
 									</div>
 									<div class="col-xl-4 room-feature">
-										<img src="images/rr4.png" alt="">CCTV (Video Surveillance)
+										<img src="images/pp4.png" alt="">CCTV (Video Surveillance)
 									</div>
 									<div class="col-xl-4 room-feature">
-										<img src="images/rr5.png" alt="">Car Parking
+										<img src="images/pp5.png" alt="">Car Parking
 									</div>
 									<div class="col-xl-4 room-feature">
-										<img src="images/rr6.png" alt="">Reception / Lobby Area
+										Reception / Lobby Area
 									</div>  
 								</div>
 							</div>
 
+							 
 						</div>
 						<div class="col-xl-3">
 							<div class="information">
@@ -404,6 +403,352 @@
 								</form>
 							</div>
 						</div>
+
+						<div class="col-12">
+							<h2>Location map</h2> 
+							<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="100%" height="440" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+							
+							<h2>Loan calculation</h2> 
+							<div class="loan-calculation">
+								<div class="row">
+									<div class="col-xl-6 pr-5">
+										<form>
+											<div class="form-group row">
+												<div class="col-xl-6">
+													<label for="formControlRange">Property Price</label>
+													<input type="text" class="form-control">
+													<p>฿</p>
+													<span>฿</span>
+													<input type="range" class="form-control-range" id="formControlRange">
+												</div>
+												<div class="col-xl-6">
+													<label for="formControlRange">Down Payment</label>
+													<input type="text" class="form-control">
+													<p>฿</p>
+													<span>20%</span>
+													<input type="range" class="form-control-range" id="formControlRange">
+												</div>
+											</div>
+
+											<div class="clearfix">&nbsp;</div> 
+											
+											<div class="form-group row">
+												<div class="col-xl-6">
+													<label for="formControlRange">Interest Rate</label>
+													<input type="text" class="form-control">
+													<p>฿</p>
+													<span>%</span>
+													<input type="range" class="form-control-range" id="formControlRange">
+												</div>
+												<div class="col-xl-6">
+													<label for="formControlRange">Loan Term</label>
+													<input type="text" class="form-control">
+													<p>฿</p>
+													<span>Years</span>
+													<input type="range" class="form-control-range" id="formControlRange">
+												</div>
+											</div>
+
+										</form>
+									</div>
+									<div class="col-xl-6 pl-5">
+										<div class="row">
+											<div class="col-xl-7 text-center">
+												<canvas id="doughnut"  width="233" height="233">xx</canvas>
+												<h4>Finance: Finance options are available</h4>
+											</div>
+											<div class="col-xl-5 data-doughnut">
+												<div>
+													<ul>
+														<li class="doughnut1">
+															<div></div>Loan Amount     ฿3.9M
+														</li>
+														<li class="doughnut2">  
+															<div></div>Down Payment  ฿930K
+														</li>
+													</ul>
+
+													<div class="clearfix mb-x">&nbsp;</div>  
+													<div class="clearfix mb-x">&nbsp;</div>  
+													<div class="clearfix mb-x">&nbsp;</div> 
+
+													<a href="#" class="btn btn-request">Request Details</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<h2>Available Units at <span>The Nest Chula-Samyan</span></h2>
+
+							<div class="row">
+								<div class="col-xl-7 available">
+									<div class="form-group row">
+										<button type="button" class="btn btn-sel active">ทั้งหมด</button>
+										<button type="button" class="btn btn-sel">1 ห้องนอน</button>
+										<button type="button" class="btn btn-sel">2 ห้องนอน</button>
+										<select class="selectpicker form-control sel1" title="Unit Tye" data-show-subtext="true" data-live-search="true"  > 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+										</select>
+										<select class="selectpicker form-control sel2" title="เรียงตาม: เราแนะนำ" data-show-subtext="true" data-live-search="true"  > 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+										</select>
+									</div>
+								</div>
+								<div class="col-xl-5">
+
+								</div>
+
+								<div class="col-xl-12 available-card p-0">
+									<div class="row">
+										<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+											<div class="condo-card">
+												<div class="cover" style="background: url(images/condo-img.png);"> 
+												</div>
+												<div class="detail">
+													<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+						
+													<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+						
+													<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+												</div>
+												<div class="option">
+													<ul>
+														<li>
+															<img src="images/11.png" alt="">
+															<h6>ห้องน้ำ <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/22.png" alt="">
+															<h6>ห้องนอน <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/33.png" alt="">
+															<h6>รถไฟฟ้า <span>1</span></h6>
+														</li>
+														<li>
+															<img src="images/44.png" alt="">
+															<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+														</li>
+														<li>
+															<img src="images/55.png" alt="">
+															<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+														</li>
+														<li>
+															<img src="images/66.png" alt="">
+															<h6>ที่จอดรถ <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/77.png" alt="">
+															<h6>ชั้น <span>7</span></h6>
+														</li>
+														<li>
+															<img src="images/88.png" alt="">
+															<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+														</li>
+													</ul>
+												</div>
+												<div class="option2">
+													<p>ชาวต่างชาติ</p>
+													<p>วิวทะเลสาป</p>
+												</div>
+												<div class="option3">
+													<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+													<a href="#" class="btn btn-des">รายละเอียด</a>
+												</div>
+											</div> 
+										</div>     
+										<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+											<div class="condo-card">
+												<div class="cover" style="background: url(images/condo-img.png);"> 
+												</div>
+												<div class="detail">
+													<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+						
+													<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+						
+													<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+												</div>
+												<div class="option">
+													<ul>
+														<li>
+															<img src="images/11.png" alt="">
+															<h6>ห้องน้ำ <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/22.png" alt="">
+															<h6>ห้องนอน <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/33.png" alt="">
+															<h6>รถไฟฟ้า <span>1</span></h6>
+														</li>
+														<li>
+															<img src="images/44.png" alt="">
+															<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+														</li>
+														<li>
+															<img src="images/55.png" alt="">
+															<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+														</li>
+														<li>
+															<img src="images/66.png" alt="">
+															<h6>ที่จอดรถ <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/77.png" alt="">
+															<h6>ชั้น <span>7</span></h6>
+														</li>
+														<li>
+															<img src="images/88.png" alt="">
+															<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+														</li>
+													</ul>
+												</div>
+												<div class="option2">
+													<p>ชาวต่างชาติ</p>
+													<p>วิวทะเลสาป</p>
+												</div>
+												<div class="option3">
+													<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+													<a href="#" class="btn btn-des">รายละเอียด</a>
+												</div>
+											</div> 
+										</div>   
+										<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+											<div class="condo-card">
+												<div class="cover" style="background: url(images/condo-img.png);"> 
+												</div>
+												<div class="detail">
+													<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+						
+													<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+						
+													<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+												</div>
+												<div class="option">
+													<ul>
+														<li>
+															<img src="images/11.png" alt="">
+															<h6>ห้องน้ำ <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/22.png" alt="">
+															<h6>ห้องนอน <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/33.png" alt="">
+															<h6>รถไฟฟ้า <span>1</span></h6>
+														</li>
+														<li>
+															<img src="images/44.png" alt="">
+															<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+														</li>
+														<li>
+															<img src="images/55.png" alt="">
+															<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+														</li>
+														<li>
+															<img src="images/66.png" alt="">
+															<h6>ที่จอดรถ <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/77.png" alt="">
+															<h6>ชั้น <span>7</span></h6>
+														</li>
+														<li>
+															<img src="images/88.png" alt="">
+															<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+														</li>
+													</ul>
+												</div>
+												<div class="option2">
+													<p>ชาวต่างชาติ</p>
+													<p>วิวทะเลสาป</p>
+												</div>
+												<div class="option3">
+													<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+													<a href="#" class="btn btn-des">รายละเอียด</a>
+												</div>
+											</div> 
+										</div>   
+										<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+											<div class="condo-card">
+												<div class="cover" style="background: url(images/condo-img.png);"> 
+												</div>
+												<div class="detail">
+													<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+						
+													<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+						
+													<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+												</div>
+												<div class="option">
+													<ul>
+														<li>
+															<img src="images/11.png" alt="">
+															<h6>ห้องน้ำ <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/22.png" alt="">
+															<h6>ห้องนอน <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/33.png" alt="">
+															<h6>รถไฟฟ้า <span>1</span></h6>
+														</li>
+														<li>
+															<img src="images/44.png" alt="">
+															<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+														</li>
+														<li>
+															<img src="images/55.png" alt="">
+															<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+														</li>
+														<li>
+															<img src="images/66.png" alt="">
+															<h6>ที่จอดรถ <span>2</span></h6>
+														</li>
+														<li>
+															<img src="images/77.png" alt="">
+															<h6>ชั้น <span>7</span></h6>
+														</li>
+														<li>
+															<img src="images/88.png" alt="">
+															<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+														</li>
+													</ul>
+												</div>
+												<div class="option2">
+													<p>ชาวต่างชาติ</p>
+													<p>วิวทะเลสาป</p>
+												</div>
+												<div class="option3">
+													<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+													<a href="#" class="btn btn-des">รายละเอียด</a>
+												</div>
+											</div> 
+										</div>   
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+
+						
+
+
 					</div>
 
 
@@ -412,8 +757,606 @@
 			</div>
 		</section>
 
+		<section class="bg-unit">
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-xl-10">
+						<div class="row main-description"> 
+							<div class="col-12"> 
+						 
+	
+								<h2>ยูนิตมือสองและให้เช่า</h2>
+								
+								<div class="col-xl-12 available mb-4 mt-3">
+									<div class="form-group row">
+										<button type="button" class="btn btn-sel active">ทั้งหมด</button>
+										<button type="button" class="btn btn-sel">1 ห้องนอน</button>
+										<button type="button" class="btn btn-sel">2 ห้องนอน</button>
+										<select class="selectpicker form-control sel1" title="Unit Tye" data-show-subtext="true" data-live-search="true"  > 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+										</select>
+										<select class="selectpicker form-control sel2" title="เรียงตาม: เราแนะนำ" data-show-subtext="true" data-live-search="true"  > 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+											<option>ราคาเริ่มต้น</option> 
+										</select>
+									</div>
+								</div> 
 
+								<div class="row">  
+									<div class="col-xl-12 available-card p-0">
+										<div class="row">
+											<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+												<div class="condo-card">
+													<div class="cover" style="background: url(images/condo-img.png);"> 
+													</div>
+													<div class="detail">
+														<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+							
+														<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+							
+														<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+													</div>
+													<div class="option">
+														<ul>
+															<li>
+																<img src="images/11.png" alt="">
+																<h6>ห้องน้ำ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/22.png" alt="">
+																<h6>ห้องนอน <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/33.png" alt="">
+																<h6>รถไฟฟ้า <span>1</span></h6>
+															</li>
+															<li>
+																<img src="images/44.png" alt="">
+																<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+															</li>
+															<li>
+																<img src="images/55.png" alt="">
+																<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+															</li>
+															<li>
+																<img src="images/66.png" alt="">
+																<h6>ที่จอดรถ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/77.png" alt="">
+																<h6>ชั้น <span>7</span></h6>
+															</li>
+															<li>
+																<img src="images/88.png" alt="">
+																<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+															</li>
+														</ul>
+													</div>
+													<div class="option2">
+														<p>ชาวต่างชาติ</p>
+														<p>วิวทะเลสาป</p>
+													</div>
+													<div class="option3">
+														<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+														<a href="#" class="btn btn-des">รายละเอียด</a>
+													</div>
+												</div> 
+											</div>     
+											<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+												<div class="condo-card">
+													<div class="cover" style="background: url(images/condo-img.png);"> 
+													</div>
+													<div class="detail">
+														<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+							
+														<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+							
+														<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+													</div>
+													<div class="option">
+														<ul>
+															<li>
+																<img src="images/11.png" alt="">
+																<h6>ห้องน้ำ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/22.png" alt="">
+																<h6>ห้องนอน <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/33.png" alt="">
+																<h6>รถไฟฟ้า <span>1</span></h6>
+															</li>
+															<li>
+																<img src="images/44.png" alt="">
+																<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+															</li>
+															<li>
+																<img src="images/55.png" alt="">
+																<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+															</li>
+															<li>
+																<img src="images/66.png" alt="">
+																<h6>ที่จอดรถ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/77.png" alt="">
+																<h6>ชั้น <span>7</span></h6>
+															</li>
+															<li>
+																<img src="images/88.png" alt="">
+																<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+															</li>
+														</ul>
+													</div>
+													<div class="option2">
+														<p>ชาวต่างชาติ</p>
+														<p>วิวทะเลสาป</p>
+													</div>
+													<div class="option3">
+														<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+														<a href="#" class="btn btn-des">รายละเอียด</a>
+													</div>
+												</div> 
+											</div>   
+											<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+												<div class="condo-card">
+													<div class="cover" style="background: url(images/condo-img.png);"> 
+													</div>
+													<div class="detail">
+														<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+							
+														<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+							
+														<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+													</div>
+													<div class="option">
+														<ul>
+															<li>
+																<img src="images/11.png" alt="">
+																<h6>ห้องน้ำ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/22.png" alt="">
+																<h6>ห้องนอน <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/33.png" alt="">
+																<h6>รถไฟฟ้า <span>1</span></h6>
+															</li>
+															<li>
+																<img src="images/44.png" alt="">
+																<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+															</li>
+															<li>
+																<img src="images/55.png" alt="">
+																<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+															</li>
+															<li>
+																<img src="images/66.png" alt="">
+																<h6>ที่จอดรถ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/77.png" alt="">
+																<h6>ชั้น <span>7</span></h6>
+															</li>
+															<li>
+																<img src="images/88.png" alt="">
+																<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+															</li>
+														</ul>
+													</div>
+													<div class="option2">
+														<p>ชาวต่างชาติ</p>
+														<p>วิวทะเลสาป</p>
+													</div>
+													<div class="option3">
+														<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+														<a href="#" class="btn btn-des">รายละเอียด</a>
+													</div>
+												</div> 
+											</div>   
+											<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+												<div class="condo-card">
+													<div class="cover" style="background: url(images/condo-img.png);"> 
+													</div>
+													<div class="detail">
+														<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+							
+														<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+							
+														<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+													</div>
+													<div class="option">
+														<ul>
+															<li>
+																<img src="images/11.png" alt="">
+																<h6>ห้องน้ำ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/22.png" alt="">
+																<h6>ห้องนอน <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/33.png" alt="">
+																<h6>รถไฟฟ้า <span>1</span></h6>
+															</li>
+															<li>
+																<img src="images/44.png" alt="">
+																<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+															</li>
+															<li>
+																<img src="images/55.png" alt="">
+																<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+															</li>
+															<li>
+																<img src="images/66.png" alt="">
+																<h6>ที่จอดรถ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/77.png" alt="">
+																<h6>ชั้น <span>7</span></h6>
+															</li>
+															<li>
+																<img src="images/88.png" alt="">
+																<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+															</li>
+														</ul>
+													</div>
+													<div class="option2">
+														<p>ชาวต่างชาติ</p>
+														<p>วิวทะเลสาป</p>
+													</div>
+													<div class="option3">
+														<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+														<a href="#" class="btn btn-des">รายละเอียด</a>
+													</div>
+												</div> 
+											</div>   
+										</div>
+									</div>
+								</div>
 
+								<h2>ยูนิตพร้อม เช่า ขาย ใน <b>โครงการ คอนโดนอร์ท 8 บาย แลนด์ แอนด์ เฮ้าส์ เชียงใหม่</b></h2> 
+
+								<div class="row"> 
+									<div class="col-xl-12 available-card p-0">
+										<div class="row">
+											<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+												<div class="condo-card">
+													<div class="cover" style="background: url(images/condo-img.png);"> 
+													</div>
+													<div class="detail">
+														<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+							
+														<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+							
+														<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+													</div>
+													<div class="option">
+														<ul>
+															<li>
+																<img src="images/11.png" alt="">
+																<h6>ห้องน้ำ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/22.png" alt="">
+																<h6>ห้องนอน <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/33.png" alt="">
+																<h6>รถไฟฟ้า <span>1</span></h6>
+															</li>
+															<li>
+																<img src="images/44.png" alt="">
+																<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+															</li>
+															<li>
+																<img src="images/55.png" alt="">
+																<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+															</li>
+															<li>
+																<img src="images/66.png" alt="">
+																<h6>ที่จอดรถ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/77.png" alt="">
+																<h6>ชั้น <span>7</span></h6>
+															</li>
+															<li>
+																<img src="images/88.png" alt="">
+																<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+															</li>
+														</ul>
+													</div>
+													<div class="option2">
+														<p>ชาวต่างชาติ</p>
+														<p>วิวทะเลสาป</p>
+													</div>
+													<div class="option3">
+														<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+														<a href="#" class="btn btn-des">รายละเอียด</a>
+													</div>
+												</div> 
+											</div>     
+											<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+												<div class="condo-card">
+													<div class="cover" style="background: url(images/condo-img.png);"> 
+													</div>
+													<div class="detail">
+														<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+							
+														<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+							
+														<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+													</div>
+													<div class="option">
+														<ul>
+															<li>
+																<img src="images/11.png" alt="">
+																<h6>ห้องน้ำ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/22.png" alt="">
+																<h6>ห้องนอน <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/33.png" alt="">
+																<h6>รถไฟฟ้า <span>1</span></h6>
+															</li>
+															<li>
+																<img src="images/44.png" alt="">
+																<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+															</li>
+															<li>
+																<img src="images/55.png" alt="">
+																<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+															</li>
+															<li>
+																<img src="images/66.png" alt="">
+																<h6>ที่จอดรถ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/77.png" alt="">
+																<h6>ชั้น <span>7</span></h6>
+															</li>
+															<li>
+																<img src="images/88.png" alt="">
+																<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+															</li>
+														</ul>
+													</div>
+													<div class="option2">
+														<p>ชาวต่างชาติ</p>
+														<p>วิวทะเลสาป</p>
+													</div>
+													<div class="option3">
+														<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+														<a href="#" class="btn btn-des">รายละเอียด</a>
+													</div>
+												</div> 
+											</div>   
+											<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+												<div class="condo-card">
+													<div class="cover" style="background: url(images/condo-img.png);"> 
+													</div>
+													<div class="detail">
+														<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+							
+														<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+							
+														<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+													</div>
+													<div class="option">
+														<ul>
+															<li>
+																<img src="images/11.png" alt="">
+																<h6>ห้องน้ำ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/22.png" alt="">
+																<h6>ห้องนอน <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/33.png" alt="">
+																<h6>รถไฟฟ้า <span>1</span></h6>
+															</li>
+															<li>
+																<img src="images/44.png" alt="">
+																<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+															</li>
+															<li>
+																<img src="images/55.png" alt="">
+																<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+															</li>
+															<li>
+																<img src="images/66.png" alt="">
+																<h6>ที่จอดรถ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/77.png" alt="">
+																<h6>ชั้น <span>7</span></h6>
+															</li>
+															<li>
+																<img src="images/88.png" alt="">
+																<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+															</li>
+														</ul>
+													</div>
+													<div class="option2">
+														<p>ชาวต่างชาติ</p>
+														<p>วิวทะเลสาป</p>
+													</div>
+													<div class="option3">
+														<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+														<a href="#" class="btn btn-des">รายละเอียด</a>
+													</div>
+												</div> 
+											</div>   
+											<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12"> 
+												<div class="condo-card">
+													<div class="cover" style="background: url(images/condo-img.png);"> 
+													</div>
+													<div class="detail">
+														<a href="#"><h4>฿6,900,000 <span>Condo</span> </h4></a>
+							
+														<a href="#"><h5>Northpoint <span>for Rent</span></h5></a>
+							
+														<h6>Na Kluea, Pattaya, Chon Buri, Thailand</h6>
+													</div>
+													<div class="option">
+														<ul>
+															<li>
+																<img src="images/11.png" alt="">
+																<h6>ห้องน้ำ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/22.png" alt="">
+																<h6>ห้องนอน <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/33.png" alt="">
+																<h6>รถไฟฟ้า <span>1</span></h6>
+															</li>
+															<li>
+																<img src="images/44.png" alt="">
+																<h6>ก่อสร้าง <span>เสร็จ</span></h6>
+															</li>
+															<li>
+																<img src="images/55.png" alt="">
+																<h6>ที่ดิน <span>29</span> ตร.ว.</h6>
+															</li>
+															<li>
+																<img src="images/66.png" alt="">
+																<h6>ที่จอดรถ <span>2</span></h6>
+															</li>
+															<li>
+																<img src="images/77.png" alt="">
+																<h6>ชั้น <span>7</span></h6>
+															</li>
+															<li>
+																<img src="images/88.png" alt="">
+																<h6>พื้นที่ <span>7</span> ตร.ม.</h6>
+															</li>
+														</ul>
+													</div>
+													<div class="option2">
+														<p>ชาวต่างชาติ</p>
+														<p>วิวทะเลสาป</p>
+													</div>
+													<div class="option3">
+														<a href="#" class="btn btn-unit">สนใจยูนิตนี้</a>
+														<a href="#" class="btn btn-des">รายละเอียด</a>
+													</div>
+												</div> 
+											</div>   
+										</div>
+									</div>
+								</div>
+
+								<div class="box-lat">
+									<div>
+										<h1>คุณเป็นเจ้าของยูนิตในโครงการ <br> คอนโดนอร์ท 8 บาย แลนด์ แอนด์ เฮ้าส์ เชียงใหม่ ด้วยหรือไม่?</h1>
+										<h4>ลองเช็คดูก่อนว่าบ้านของคุณนั้นควรมีราคาอยู๋ที่ประมาณเท่าไหร่ ในทำเลนี้?</h4>
+										<div class="d-flex justify-content-center align-content-center">
+											<a href="#" class="btn">ทดลองประเมินราคา</a>
+											<a href="#" class="btn">ขั้นตอนเสนอราคา</a>
+										</div>
+									</div>
+								</div>
+	
+	
+							</div>
+	
+							
+	
+	
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-last-box">
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-xl-10">
+						<div class="row main-description"> 
+							<div class="col-12"> 
+								
+								<h2>โครงการที่อยู่ใกล้ๆ กับ คอนโดนอร์ท 8 บาย แลนด์ แอนด์ เฮ้าส์ เชียงใหม่</h2> 
+
+								<br>
+
+								<div class="row">
+									<div class="col-xl-3 pl-4 pr-4">
+										<div class="add-project">
+											<div class="img"><img src="images/plus.png" alt=""></div> 
+											 <h3>ชื่อโครงการ</h3>
+											 <h3 class="m">ทำเลที่ตั้ง</h3>
+											 <h3>จำนวนยูนิต</h3>
+											 <h3 class="m">ราคา</h3>
+											 <h3>ค่าเช่าต่อเดือน</h3>
+											 <h3>ปีที่แล้วเสร็จ</h3>
+											 <h3>สถานะของโครงการ</h3>
+										</div>
+									</div>
+									<div class="col-xl-3 pl-4 pr-4">
+										<div class="view-project">
+											<div class="img" style="background: url(images/v3.png);"></div>
+											<h3>ซีรีน เลค นอร์ธ 5</h3>
+											<h4>แม่เหียะ, เมืองเชียงใหม่</h4>
+											<h4>เชียงใหม่</h4>
+											<h4>69</h4>
+											<h3 class="m">฿2.99M</h3>
+											<h4>N/A</h4>
+											<h4>ม.ค. 2557</h4>
+											<h4>สร้างเสร็จแล้ว</h4>
+										</div>
+									</div>
+									<div class="col-xl-3 pl-4 pr-4">
+										<div class="view-project">
+											<div class="img" style="background: url(images/v3.png);"></div>
+											<h3>ซีรีน เลค นอร์ธ 5</h3>
+											<h4>แม่เหียะ, เมืองเชียงใหม่</h4>
+											<h4>เชียงใหม่</h4>
+											<h4>69</h4>
+											<h3 class="m">฿2.99M</h3>
+											<h4>N/A</h4>
+											<h4>ม.ค. 2557</h4>
+											<h4>สร้างเสร็จแล้ว</h4>
+										</div>
+									</div>
+									<div class="col-xl-3 pl-4 pr-4">
+										<div class="view-project">
+											<div class="img" style="background: url(images/v3.png);"></div>
+											<h3>ซีรีน เลค นอร์ธ 5</h3>
+											<h4>แม่เหียะ, เมืองเชียงใหม่</h4>
+											<h4>เชียงใหม่</h4>
+											<h4>69</h4>
+											<h3 class="m">
+												฿2.99M <br>
+												<span><b>▼ -28%</b> ต่ำกว่าราคาตลาด</span>
+											</h3>
+											<h4>N/A</h4>
+											<h4>ม.ค. 2557</h4>
+											<h4>สร้างเสร็จแล้ว</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
  
 		
 	</main>
@@ -556,102 +1499,44 @@
 
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
-	
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"  ></script>
+	
 	<script>
-		$('.deal-type li').click(function() {
-			$('.deal-type li').removeClass("active");
-			$(this).addClass("active");
+		var ctx = document.getElementById("doughnut");
+			var doughnut = new Chart(ctx, {
+			type: 'doughnut',
+			data: { 
+				datasets: [{
+				label: '# of Tomatoes',
+				data: [75, 25],
+				backgroundColor: [
+					'#1F4D8E',
+					'#FFB800', 
+				], 
+				borderWidth: 0
+				}]
+			},
+			options: {
+				//cutoutPercentage: 40,
+				responsive: false,
+
+			}
 		});
 
-		$(document).ready(function () { 
-            if ($('.owl3').length) {
-                var brandsSlider = $('.owl3');
+	 
 
-                brandsSlider.owlCarousel({
-                    center: false,
-                    loop: true,
-                    autoplay: false,
-                    autoplayTimeout: 5000,
-                    nav: true,
-                    dots: false,
-                    autoWidth: true,
-                    items: 3,
-                    margin: 55
-                }); 
-            }  
-
-			if ($('.owl4').length) {
-                var brandsSlider = $('.owl4');
-
-                brandsSlider.owlCarousel({
-                    center: false,
-                    loop: true,
-                    autoplay: false,
-                    autoplayTimeout: 5000,
-                    nav: true,
-                    dots: false,
-                    autoWidth: true,
-                    items: 3,
-                    margin: 55
-                }); 
-            }  
-
-			
-            if ($('.owl5').length) {
-                var brandsSlider = $('.owl5');
-
-                brandsSlider.owlCarousel({
-                    center: true,
-                    loop: true,
-                    autoplay: false,
-                    autoplayTimeout: 5000,
-                    nav: true,
-                    dots: false,
-                    autoWidth: true,
-                    items: 3,
-                    margin: 35
-                }); 
-            }  
-			if ($('.owl7').length) {
-                var brandsSlider = $('.owl7');
-
-                brandsSlider.owlCarousel({
-                    center: false,
-                    loop: true,
-                    autoplay: false,
-                    autoplayTimeout: 5000,
-                    nav: true,
-                    dots: false,
-                    autoWidth: true,
-                    items: 4,
-                    margin: 111
-                }); 
-            }  
-			if ($('.owl9').length) {
-                var brandsSlider = $('.owl9');
-
-                brandsSlider.owlCarousel({
-                    center: false,
-                    loop: true,
-                    autoplay: false,
-                    autoplayTimeout: 5000,
-                    nav: false,
-                    dots: true,
-                    autoWidth: true,
-                    items: 4,
-                    margin: 60 
-                }); 
-            }  
-			
-			
-        });
-
+		$('.btn-sel').click(function() { 
+			$(".btn-sel").removeClass("active");
+			$(this).addClass("active");
+		});
 	</script>
-	
+
+
+
+
+
 </body>
 </html>
