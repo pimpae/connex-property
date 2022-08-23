@@ -2333,8 +2333,10 @@ iframe{
 }   
 .add-project h3.m{ 
   height: 105px;
-} 
-
+}
+.view-project strong{
+  display: none;
+}
 
 
 /* 
@@ -2833,7 +2835,214 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     width: 100%;  
   }
   
-}  
+  .top-detail > div:nth-child(1){
+    margin-top: 25px;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 18px 15px 6px;
+    height: unset !important;
+    margin-bottom: 0px;
+  }
+  .top-detail > div:nth-child(2){
+    margin-top: 0px;
+    border-radius:  0 0 20px 20px !important;
+    padding: 18px 15px 6px;
+    height: unset !important;
+    margin-bottom: 0px;
+  }
+  .top-detail img{
+    width: 24px;
+    height: 24px;
+  }
+  .top-detail > div:nth-child(2) { 
+    grid-template-columns: repeat(auto-fill,minmax(67px, 1fr));
+    display: grid;
+  }
+  .img-view { 
+    margin-top: 30px;
+    border-radius: 20px !important;  
+    background-size: auto 100%  !important;
+  }
+  .label-rent { 
+    margin-top: 5px; 
+    transform: scale(0.7);
+    margin-left: 0px;
+  }
+  .rent-sell { 
+    left: -30px; 
+  }
+  .btn-print { 
+    right: 13px;
+    top: 10px; 
+  }
+  .btn-share { 
+    right: 13px;
+    top: 81px; 
+  }
+  .img-view-sub{
+    display: flex;
+    margin-top: -70px;
+  }
+  .img-view-sub > div{
+    width: 100%;
+    height: 100px;
+  }
+  .box-view .box-view-type div { 
+    background-size: auto 100%  !important; 
+  }
+  .img-view-sub > div:nth-child(3) p { 
+    font-size: 17px;
+    line-height: 20px; 
+  }
+  .box-view-type > div{
+    display: none !important;
+  }
+  .box-view .box-view-type {
+    width: 90px;
+    font-size: 14px;
+    height: 55px;
+  }
+  .box-view { 
+    bottom: 20px; 
+  }
+  .box-view .box-view-type h3 {
+    font-size: 13px; 
+  }
+  .img-view-sub > div:nth-child(1) {
+    border-radius: 0px !important;
+  }
+  .img-view-sub > div:nth-child(3)::before { 
+    border-radius: 0px  !important;
+  }
+  .img-view-sub > div:nth-child(3) { 
+    border-radius: 0px  !important;
+  }
+  .main-description h2 {
+    margin-top: 10px;
+  }
+  .main-description h6 { 
+    font-size: 15px;
+    line-height: 24px; 
+  }
+  .basic-information{
+    height: unset !important; 
+    padding: 25px 15px 0px;
+  }
+  .basic-information .pr-5{
+    padding-right: 15px !important;
+  }
+  .project-detail {
+    display: block;
+  }
+  .project-detail .text li{
+    display: flex;
+  }
+  .project-detail .text li p { 
+    margin-bottom: 8px; 
+    font-size: 14px;
+  }
+  .information form .col-xl-6.pr-1{
+    padding-right: 15px !important;
+  }
+  .information form .col-xl-6.pl-1{
+    padding-left: 15px !important;
+    margin-top: 1rem !important;
+  }
+  .loan-calculation{
+    height: unset !important;
+    padding: 20px 15px 20px 15px !important;
+  }
+  .loan-calculation .col-xl-6.pr-5{
+    padding-right: 15px !important;
+  }
+  .loan-calculation .col-xl-6.pl-5{
+    padding-left: 15px !important;
+    margin-top: 1rem !important;
+  }
+  .available .btn-sel { 
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  
+  .available .sel1{
+    width: 100% !important;  
+  } 
+  .available .sel1 + .btn{
+    width: 100% !important;  
+  } 
+  .available .sel2{
+    width: 100% !important;  
+    margin-top: 20px;
+  }  
+  .available .sel2 + .btn{
+    width: 100% !important;  
+  } 
+  .available  .bootstrap-select{
+    margin-left: 10px !important;
+  }
+  .available-card{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .available-card > .row > div .condo-card{
+    margin-top: 20px;
+  }
+  .box-lat {
+    border-radius: 10px;
+    margin-top: 20px;
+    height: unset !important;
+    display: flex;
+    padding: 20px 15px;
+  }
+  .box-lat h1 { 
+    font-size: 20px;
+    line-height: 35px; 
+  }
+  .box-lat h4 { 
+    font-size: 16px;
+    line-height: 25px; 
+    margin-bottom: 10px;
+  }
+  .box-lat .btn { 
+    font-size: 16px; 
+    width: 160px;
+    height: 40px; 
+  }
+  .main-description h2 { 
+    font-size: 22px; 
+  }
+  .bg-last-box .pl-4.pr-4{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .bg-last-box .col-xl-3:nth-child(1){
+    display: none;
+  }
+  .view-project h3{
+    position: relative;
+    text-align: right;
+    font-size: 20px;
+  }
+  .view-project h4 {
+    position: relative;
+    text-align: right;
+    font-size: 16px;
+  }
+  .view-project h3 span{
+    position: relative;
+    text-align: right;
+    font-size: 12px;
+  }
+  .view-project strong{
+    position: absolute;
+    left: 0;
+    top: 0; 
+    display: block;
+  }
+
+}
+
+
 @media only screen and (width: 1024px) { /* IPAD PRO */  
   .map-arr{ 
     display: none;
