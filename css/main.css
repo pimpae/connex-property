@@ -1881,9 +1881,7 @@ iframe{
 .basic-information h4 span{ 
   color: #5681BF;
 }
-.information{ 
-  left: 971px;
-  top: 992px;
+.information{  
   padding: 20px 14px 24px;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -3039,7 +3037,31 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     top: 0; 
     display: block;
   }
-
+  .col-xl-9.pr-mn{
+    padding-right: 15px !important;
+  }
+  .available{
+    padding-right: 25px !important;
+  }
+  .available .bootstrap-select>select{
+    left: 0 !important;
+  }
+  .available-card .col-xl-3{
+    padding-left: 15px !important;
+  }
+  
+  .available-card .condo-card {
+    margin-left: 0px !important;
+    margin-right: 0px !important;  
+  }
+  .information .pr-1{
+    padding-right: 15px !important;
+  }
+  .information .pl-1{
+    padding-left: 15px !important;
+    margin-top: 15px;
+  }
+ 
 }
 
 
@@ -3078,8 +3100,71 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   .contact-description h3{
     margin-top: 35px;
   }
+  .top-detail img {
+    height: 30px;
+    width: 30px;
+  }
+  .top-detail .optix > div {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .top-detail h5 { 
+    font-size: 10px; 
+  }
+  .img-view { 
+    border-radius: 40px !important; 
+  }
+  .box-view { 
+    bottom: -45px; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .img-view-sub{ 
+    display: flex !important;
+  }
+  .img-view-sub > div{ 
+    border-radius: 0px !important;
+    width: 33%;
+  }
+  .img-view-sub > div::before{ 
+    border-radius: 0px !important;
+    width: 33%;
+  }
+  .loan-calculation{
+    height: unset !important;
+  }
+  .available-card.p-0{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .available  .condo-card {
+    margin-left: 0px !important;
+    margin-right: 0px !important; 
+  }
+  .available-card > .row > div .condo-card{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-top: 30px;
+  }
+  .add-project h3 {
+    padding-left: 0px;
+  }
+  .view-project .img { 
+    background-size: auto 100%  !important; 
+  }
 }
-
+@media only screen and (width: 768px) { /* IPAD PRO */  
+  .project-detail {
+    display: flex;
+  }
+  .project-detail .img { 
+    background-size: auto 100% !important; 
+  }
+  .top-detail > div:nth-child(2) {
+    grid-template-columns: unset !important;
+    display: flex;
+  }
 
 
 
