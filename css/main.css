@@ -233,7 +233,7 @@ header nav .navbar-nav .nav-item:hover .nav-link{
   margin-top: 13px;
   margin-left: 10px;
   margin-right: 10px;
-  width: 315px;
+  width: 90%;
   height: 417px; 
   background-position: center ;
   background-repeat: no-repeat !important;
@@ -267,7 +267,7 @@ header nav .navbar-nav .nav-item:hover .nav-link{
   margin-top: 13px;
   margin-left: 10px;
   margin-right: 10px;
-  width: 315px;
+  width: 90%;
   height: 202px; 
   background-position: center ;
   background-repeat: no-repeat !important;
@@ -2452,6 +2452,7 @@ iframe{
   display: block;
   justify-content: center;
   width: 100%;
+  margin-right: 15px !important;
 }
 
 
