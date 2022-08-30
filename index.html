@@ -143,68 +143,117 @@
 
 		<section class="sec-home2"> 
 			<div class="container-fluid">
-				<div class="img-flex">
-					<a href="#">
-						<div class="img-cover1" style="background: url(images/ss1.png);">
-							<div class="des1">
-								<h5>Looking for property in</h5>
-								<h3>Bangkok</h3>
-							</div>
-						</div>
-					</a> 
-					<div>
-						<a href="#">
-							<div class="img-cover2" style="background: url(images/ss1.png);"> 
-								<div class="des2">
-									<h3>Sathon</h3>
-									<h5>463 Properties for you</h5>
-								</div>
-							</div> 
-						</a>
-						<a href="#">
-							<div class="img-cover2" style="background: url(images/ss1.png);"> 
-								<div class="des2">
-									<h3>Sathon</h3>
-									<h5>463 Properties for you</h5>
-								</div>
-							</div> 
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<div class="img-cover2" style="background: url(images/ss1.png);"> 
-								<div class="des2">
-									<h3>Sathon</h3>
-									<h5>463 Properties for you</h5>
-								</div>
-							</div> 
-						</a>
-						<a href="#">
-							<div class="img-cover2" style="background: url(images/ss1.png);"> 
-								<div class="des2">
-									<h3>Sathon</h3>
-									<h5>463 Properties for you</h5>
-								</div>
-							</div> 
-						</a>
-					</div>
-					<a href="#">
-						<div class="img-cover1" style="background: url(images/ss6.png);">
-							<div class="des1">
-								<h5>Looking for property in</h5>
-								<h3>Choburi</h3>
-							</div>
-						</div> 
-					</a>
 
-					
-				<a href="#" class="arr-right">
-					<p>
-						<img src="images/right.png" alt="">
-					</p>
-				</a>
-
+				<div class="row justify-content-center">
+					<div class="col-xl-10">
+						<ul id="item2" class="item2">
+							<li>
+								<a href="#">
+									<div class="img-cover1" style="background: url(images/ss1.png);">
+										<div class="des1">
+											<h5>Looking for property in</h5>
+											<h3>Bangkok</h3>
+										</div>
+									</div>
+								</a>  
+							</li>
+							<li>
+								<a href="#">
+									<div class="img-cover2" style="background: url(images/ss1.png);"> 
+										<div class="des2">
+											<h3>Sathon</h3>
+											<h5>463 Properties for you</h5>
+										</div>
+									</div> 
+								</a>
+								<a href="#">
+									<div class="img-cover2" style="background: url(images/ss1.png);"> 
+										<div class="des2">
+											<h3>Sathon</h3>
+											<h5>463 Properties for you</h5>
+										</div>
+									</div> 
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img-cover2" style="background: url(images/ss1.png);"> 
+										<div class="des2">
+											<h3>Sathon</h3>
+											<h5>463 Properties for you</h5>
+										</div>
+									</div> 
+								</a>
+								<a href="#">
+									<div class="img-cover2" style="background: url(images/ss1.png);"> 
+										<div class="des2">
+											<h3>Sathon</h3>
+											<h5>463 Properties for you</h5>
+										</div>
+									</div> 
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img-cover1" style="background: url(images/ss1.png);">
+										<div class="des1">
+											<h5>Looking for property in</h5>
+											<h3>Bangkok</h3>
+										</div>
+									</div>
+								</a>  
+							</li>
+							<li>
+								<a href="#">
+									<div class="img-cover2" style="background: url(images/ss1.png);"> 
+										<div class="des2">
+											<h3>Sathon</h3>
+											<h5>463 Properties for you</h5>
+										</div>
+									</div> 
+								</a>
+								<a href="#">
+									<div class="img-cover2" style="background: url(images/ss1.png);"> 
+										<div class="des2">
+											<h3>Sathon</h3>
+											<h5>463 Properties for you</h5>
+										</div>
+									</div> 
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img-cover2" style="background: url(images/ss1.png);"> 
+										<div class="des2">
+											<h3>Sathon</h3>
+											<h5>463 Properties for you</h5>
+										</div>
+									</div> 
+								</a>
+								<a href="#">
+									<div class="img-cover2" style="background: url(images/ss1.png);"> 
+										<div class="des2">
+											<h3>Sathon</h3>
+											<h5>463 Properties for you</h5>
+										</div>
+									</div> 
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img-cover1" style="background: url(images/ss1.png);">
+										<div class="des1">
+											<h5>Looking for property in</h5>
+											<h3>Bangkok</h3>
+										</div>
+									</div>
+								</a>  
+							</li>
+						</ul>
+					</div>
 				</div>
+
+				 
 			</div>
 		</section>
 
@@ -1429,6 +1478,47 @@
 		});
 
 		$(document).ready(function() { 
+
+			$('#item2').lightSlider({
+				item:4,
+				loop:false,
+				slideMove:1,
+				easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+				speed:600,
+				responsive : [
+					{
+						breakpoint:1900,
+						settings: {
+							item:4,
+							slideMove:1,
+							slideMargin:6,
+						}
+					}, 
+					{
+						breakpoint:1200,
+						settings: {
+							item:3,
+							slideMove:1,
+							slideMargin:6,
+						}
+					}, 
+					{
+						breakpoint:800,
+						settings: {
+							item:2,
+							slideMove:1,
+							slideMargin:6,
+						}
+					}, 
+					{
+						breakpoint:480,
+						settings: {
+							item:1,
+							slideMove:1
+						}
+					}
+				]
+			});  
 
         	$('#item3').lightSlider({
 				item:3,

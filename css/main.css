@@ -113,9 +113,9 @@ header nav .navbar-nav .nav-item:hover .nav-link{
 }
 .sec-home1{
   background: url(../images/bg1.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto; 
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important; 
 }
 .sec-home1 > div{
   height: 551px;
@@ -215,9 +215,9 @@ header nav .navbar-nav .nav-item:hover .nav-link{
 }
 .sec-home2{
   background: url(../images/bg2.png) ,  #374757 ;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
   height: 564px; 
   background-blend-mode: luminosity; 
 } 
@@ -357,9 +357,9 @@ header nav .navbar-nav .nav-item:hover .nav-link{
 
 .sec-home3{
   background: url(../images/bg3.png) ,  #fff ;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
   height: 859px; 
   background-blend-mode: luminosity;
 }
@@ -515,9 +515,9 @@ header nav .navbar-nav .nav-item:hover .nav-link{
 
 .sec-home4{
   background: url(../images/bg4.png) ,  #374757 ;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
   height: 859px; 
   background-blend-mode: luminosity;
 }
@@ -546,9 +546,9 @@ header nav .navbar-nav .nav-item:hover .nav-link{
 } 
 .sec-home6{
   background: url(../images/bg6.png) ,  #2C5999 ;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
   height: 818px; 
   background-blend-mode: luminosity;
 }
@@ -641,12 +641,16 @@ header nav .navbar-nav .nav-item:hover .nav-link{
   color: #FFB800;
 }
 .news-card{ 
-  width: 281px;
+  width: 90%;
+}
+.item7 li a{
+  display: flex;
+  justify-content: center;
 }
 .news-card .img{ 
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
   height: 191px;
   border-radius: 10px; 
   margin-top: 15px;
@@ -725,9 +729,9 @@ header nav .navbar-nav .nav-item:hover .nav-link{
 
 .sec-home8{
   background: url(../images/bg8.png) ,  #374757 ;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
   height: 570px; 
   background-blend-mode: luminosity;
 }
@@ -853,9 +857,9 @@ footer .bot-menu span{
 
 .sec-home9{
   background: url(../images/bg9.png) ,  #fff ;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
   height: 528px; 
   background-blend-mode: luminosity;
 }
@@ -1380,9 +1384,9 @@ iframe{
 
 .benefits{
   background: url(../images/bgb.png) ,#374757;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto; 
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important; 
   background-blend-mode: luminosity; 
 }
 .benefits > div{
@@ -2254,9 +2258,9 @@ iframe{
   margin-top: 40px;
   height: 332px; 
   background: url(../images/bg-last.png) ,  #374757 ;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto; 
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important; 
   background-blend-mode: luminosity; 
   display: flex;
   align-items: center;
@@ -2382,6 +2386,7 @@ iframe{
   opacity: 1 !important;
   width: 89px !important;
   height: 89px !important; 
+  top: 20% !important;
 }
 .lSNext{
   background: url(../images/right.png) , rgba(255, 255, 255, 0.6) !important;
@@ -2397,9 +2402,56 @@ iframe{
 
 .sec-home9  .lSPager{
   display: block !important;
+  margin-top: 30px !important;
 }
 .sec-home9  .lSAction{
   display: none !important;
+}
+.lSSlideOuter .lSPager.lSpg > li a{
+  width: 14px !important;
+  height: 14px !important;
+}
+
+
+.owlm2 .owl-nav div{
+  position: absolute !important;
+  width: 28px !important;
+  height: 28px !important;
+  background-color: #000000 !important; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  top: 0;
+  margin-top: -53px !important; 
+  border-radius: 100% !important;
+  color: rgba(0, 0, 0, 0) !important; 
+}   
+
+
+.sec-home7 .lSAction > a{ 
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 6.5px 13px !important;
+  border-radius: 100%;
+  box-shadow: 0px 10px 20px rgb(0 0 0 / 10%);
+  opacity: 1 !important;
+  width: 28px !important;
+  height: 28px !important; 
+  top: 20% !important;
+}
+.sec-home7 .lSNext{
+  background: url(../images/right2.png) , #000 !important;
+}
+.sec-home7 .lSPrev{
+  background: url(../images/left2.png) , #000 !important;
+}
+
+
+.sec-home2 .lSSlideOuter .lightSlider > *, .sec-home2 .lSSlideOuter .lSGallery li{
+  display: block;
+  justify-content: center;
+  width: 100%;
 }
 
 
