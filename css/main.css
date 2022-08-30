@@ -52,6 +52,13 @@
 a:hover{
   text-decoration: none;
 } 
+header .dropdown:hover>.dropdown-menu {
+  display: block;
+  margin-top: 0px;
+}
+header .dropdown-toggle:after { 
+  content: none
+} 
 header{ 
   padding-left: 80px;
   padding-right: 80px; 
@@ -390,8 +397,8 @@ header nav .navbar-nav .nav-item:hover .nav-link{
   border-radius: 20px;
 }
 .condo-card .cover{ 
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
   background-size: 100% auto !important;
   height: 253px;
   border-radius: 10px; 
@@ -927,21 +934,46 @@ footer .bot-menu span{
   margin-right: 60px;
   right: 0;
   bottom: 0;
-  margin-bottom: 150px;
-  width: 68px;
-  height: 242px; 
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 60px;
+  width: 68px; 
+  height: 68px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0);
   border-radius: 20px;
   padding: 10px;
   z-index: 11;
+}
+.social-con.active{ 
+  background: rgba(255, 255, 255, 0.6);
+  height: unset;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
 }
 .social-con img{
   width: 48px;
   height: 48px;
   border-radius: 100%;
   margin-bottom: 10px;
+  display: none;
 }
+.social-con.active img{ 
+  display: block;
+}
+.social-con button{
+  width: 48px;  
+  height: 48px; 
+  background-color: #1F4D8E;
+  border-radius: 100%;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 26px;
+}
+.social-con button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+
 .navbar-collapse form{
   position: relative;
 }
@@ -2335,6 +2367,33 @@ iframe{
 .view-project strong{
   display: none;
 }
+.lSPager{
+ display: none !important;
+}
+.lSAction{
+ display: block !important;
+}
+.lSAction > a{ 
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 17px 34px !important;
+  border-radius: 100%;
+  box-shadow: 0px 10px 20px rgb(0 0 0 / 10%);
+  opacity: 1 !important;
+  width: 89px !important;
+  height: 89px !important; 
+}
+.lSNext{
+  background: url(../images/right.png) , rgba(255, 255, 255, 0.6) !important;
+}
+.lSPrev{
+  background: url(../images/left.png) , rgba(255, 255, 255, 0.6) !important;
+}
+.lSSlideOuter .lightSlider > *, .lSSlideOuter .lSGallery li{
+  margin-left: 10px;
+}
+
+
 
 
 /* 
@@ -3165,8 +3224,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     grid-template-columns: unset !important;
     display: flex;
   }
+}
 
 
 
- 
-
+  
