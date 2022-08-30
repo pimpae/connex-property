@@ -390,7 +390,7 @@ header nav .navbar-nav .nav-item:hover .nav-link{
   width: 370px;
   margin-left: 00px;
   margin-right: 00px; 
-  height: 567px;
+  height: 540px;
   padding: 15px;
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
@@ -400,7 +400,7 @@ header nav .navbar-nav .nav-item:hover .nav-link{
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: 100% auto !important;
-  height: 253px;
+  height: 230px;
   border-radius: 10px; 
 }
 .condo-card .detail h4{ 
@@ -2395,7 +2395,12 @@ iframe{
   width: 100%;
 }
 
-
+.sec-home9  .lSPager{
+  display: block !important;
+}
+.sec-home9  .lSAction{
+  display: none !important;
+}
 
 
 /* 
