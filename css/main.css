@@ -388,8 +388,7 @@ header nav .navbar-nav .nav-item:hover .nav-link{
 }
 .condo-card{
   margin-left: 20px;
-  margin-right: 20px;
-  width: 402px;
+  margin-right: 20px; 
   height: 567px;
   padding: 15px;
   background: #FFFFFF;
@@ -3226,6 +3225,16 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   }
 }
 
+@media only screen and (min-width: 1400px) { /* PC */ 
+  .condo-card{ 
+    width: 380px; 
+  }
+}
 
+@media only screen and (min-width: 1900px) { /* PC */ 
+  .condo-card{ 
+    width: 402px; 
+  }
+}
 
   
