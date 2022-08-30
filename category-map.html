@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>  
     <title> Connex Property </title> 
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
 
 </head>
@@ -254,7 +253,7 @@
 					<div class="col-xl-6 col-map">
 						<div class="div-map"> 
 							<div class="map-arr"></div>
-                            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="100%" height="547" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="100%" height="480" frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div>
 					</div>
 					<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -849,31 +848,42 @@
 			<div class="container-fluid">  
 				<h1> ความประทับใจจากลูกค้า <b>/</b> <span>testimonial</span></h1>
 
-				<div class="row justify-content-around">
-					<div class="col-xl-10 pl-6 pr-5">
-						<div class="owl-carousel owl-theme owl9">
-							<div class="owl-item">
+				<div class="row justify-content-center">
+					<div class="col-xl-10  ">
+						<ul id="item9" class="item9">
+							<li> 
 								<div class="testimonial">
 									<img src="images/user.png" alt="">
 									<h4>Nulla facilisi. Mauris eu nunc sit amet orci euismod pretium eget at dui.</h4>
 									<h6>Nullam sit amet</h6>
 								</div> 
-							</div>   
-							<div class="owl-item">
+							</li>
+							<li> 
 								<div class="testimonial">
 									<img src="images/user.png" alt="">
 									<h4>Nulla facilisi. Mauris eu nunc sit amet orci euismod pretium eget at dui.</h4>
 									<h6>Nullam sit amet</h6>
 								</div> 
-							</div>  
-							<div class="owl-item">
+							</li>
+
+							<li> 
 								<div class="testimonial">
 									<img src="images/user.png" alt="">
 									<h4>Nulla facilisi. Mauris eu nunc sit amet orci euismod pretium eget at dui.</h4>
 									<h6>Nullam sit amet</h6>
 								</div> 
-							</div>  
-						</div>   
+							</li>
+
+							<li> 
+								<div class="testimonial">
+									<img src="images/user.png" alt="">
+									<h4>Nulla facilisi. Mauris eu nunc sit amet orci euismod pretium eget at dui.</h4>
+									<h6>Nullam sit amet</h6>
+								</div> 
+							</li>
+
+
+						</ul>
 					</div>
 				</div>
  
@@ -1024,8 +1034,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
 	
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 
 	<script>
@@ -1042,26 +1051,48 @@
 
         }); 
 
-		$(document).ready(function () { 
-           
-			if ($('.owl9').length) {
-                var brandsSlider = $('.owl9');
-
-                brandsSlider.owlCarousel({
-                    center: false,
-                    loop: true,
-                    autoplay: false,
-                    autoplayTimeout: 5000,
-                    nav: false,
-                    dots: true,
-                    autoWidth: true,
-                    items: 4,
-                    margin: 60 
-                }); 
-            }  
-			
-			
-        });
+		$(document).ready(function() {  
+			$('#item9').lightSlider({
+				item:2,
+				loop:false,
+				slideMove:1,
+				easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+				speed:600,
+				responsive : [
+					{
+						breakpoint:1900,
+						settings: {
+							item:2,
+							slideMove:1,
+							slideMargin:6,
+						}
+					}, 
+					{
+						breakpoint:1200,
+						settings: {
+							item:2,
+							slideMove:1,
+							slideMargin:6,
+						}
+					}, 
+					{
+						breakpoint:800,
+						settings: {
+							item:1,
+							slideMove:1,
+							slideMargin:6,
+						}
+					}, 
+					{
+						breakpoint:480,
+						settings: {
+							item:1,
+							slideMove:1
+						}
+					}
+				]
+			});   
+		});
 
 	</script>
 	
