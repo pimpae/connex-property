@@ -59,9 +59,7 @@ header .dropdown:hover>.dropdown-menu {
 header .dropdown-toggle:after { 
   content: none
 } 
-header{ 
-  padding-left: 80px;
-  padding-right: 80px; 
+header{  
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 } 
@@ -82,14 +80,11 @@ header nav .navbar-nav .nav-link{
 }
 header nav .navbar-nav .nav-item .nav-link{
   font-family: SukhumvitSet-Medium;
-  height: 50px;  
-  font-size: 22px;
+  height: 50px;   
   line-height: 35px;
   color: #222222;
   margin-left: 10px;
-  margin-right: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-right: 10px; 
   transition: .33s all ease-out;
 }
 header nav .navbar-nav .nav-item.active .nav-link{ 
@@ -1326,6 +1321,7 @@ iframe{
   font-size: 20px;
   line-height: 23px; 
   color: #979797; 
+  font-weight: bold;
 }
 .contact-main form input{
   background: #FFFFFF;
@@ -1337,6 +1333,7 @@ iframe{
   font-size: 20px;
   line-height: 23px; 
   color: #979797; 
+  font-weight: bold;
 }
 .contact-main form textarea{
   background: #FFFFFF;
@@ -1348,6 +1345,7 @@ iframe{
   font-size: 20px;
   line-height: 23px; 
   color: #979797;
+  font-weight: bold;
 }
 .contact-main form button{
   margin-top: 16px;
@@ -1370,14 +1368,14 @@ iframe{
   color: #222222; 
 }
 .contact-description h4{
-  font-family: SukhumvitSet-Thin;   
+  font-family: SukhumvitSet-Bold;   
   font-size: 20px;
   line-height: 24px; 
   color: #222222; 
 }
 .contact-description h5{
   position: relative;
-  font-family: SukhumvitSet-Light;   
+  font-family: SukhumvitSet-Bold;   
   font-size: 16px;
   line-height: 19px;
   color: #222222; 
@@ -1677,6 +1675,7 @@ iframe{
   border-radius: 40px 0px 0px 40px;
   margin-bottom: 80px;
   position: relative;
+  cursor: pointer;
 }
 .img-view-sub > div{
   height: 181px;
@@ -1731,6 +1730,7 @@ iframe{
   color: #374757 !important;
   padding-top: 10px;
   transition: .33s all ease-out; 
+  z-index: 111;
 }
 .btn-share{
   font-family: SukhumvitSet-Text; 
@@ -1748,6 +1748,7 @@ iframe{
   color: #374757 !important;
   padding-top: 10px;
   transition: .33s all ease-out; 
+  z-index: 111;
 }
 
 .btn-print:hover{
@@ -1762,8 +1763,9 @@ iframe{
 }
 .rent-sell{
   position: absolute;
-  left: 0;
+  left: 20px;
   top: 0;
+  z-index: 111;
 }
 .label-rent{
   position: relative;
@@ -1831,6 +1833,7 @@ iframe{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px; 
   position: relative;
+  cursor: pointer;
 }
 .box-view .box-view-type div {
   position: absolute;
@@ -1930,6 +1933,10 @@ iframe{
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
+
+
+
+
 .information h3{
   font-family: SukhumvitSet-Bold;    
   text-align: center;
@@ -2470,10 +2477,50 @@ iframe{
 }
 
 
+.item2 .lslide.active:nth-child(1)  + .lSAction  {
+  display: none !important;
+}
+
+.dropdown-toggle::after { 
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.dep-box .btn.dropdown-toggle{
+  width: 100% !important;
+}
+
+
+.modal-xl {
+  max-width: 80% !important;
+}
+.modal .nav-link{
+  font-family: SukhumvitSet-Bold;     
+
+} 
+#view360 img{
+  height: 700px;
+}
+#photo .carousel-control-prev-icon {
+  width: 12px;
+  background-image: url(../images/left.png);
+}
+#photo .carousel-control-next-icon {
+  width: 12px;
+  background-image: url(../images/right.png);
+}
+.carousel-control-prev{
+  opacity: 1;
+}
+.carousel-control-next{
+  opacity: 1;
+}
+
+
 /* 
-
 transition: .33s all ease-out;
-
 */
    
 /* 
@@ -3286,6 +3333,9 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   .view-project .img { 
     background-size: auto 100%  !important; 
   }
+  .information{  
+    width: 100% !important;
+  }
 }
 @media only screen and (width: 768px) { /* IPAD PRO */  
   .project-detail {
@@ -3300,16 +3350,56 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   }
 }
 
-/* @media only screen and (min-width: 1900px) {  
-  .condo-card{ 
-    width: 402px; 
+@media only screen and (min-width: 1200px) {   
+  .category-sec .condo-card .cover{ 
+    height: 150px;
+    background-size: auto 100%  !important;
+  }
+  .category-sec > div{
+    padding: 20px 10px !important;
+  }
+  .category-sec .condo-card ul{
+    grid-template-columns: repeat(auto-fill,minmax(45px, 1fr));
+  }
+  .information.active{  
+    position: fixed;
+    top: 80px; 
+    z-index: 1111 !important;
+  }
+  .information{  
+    width: 359px; 
+  }
+  header nav .navbar-nav .nav-item .nav-link{ 
+    font-size: 19px; 
+    padding-left: 0px;
+    padding-right: 0px; 
   }
 }
 @media only screen and (min-width: 1400px) {  
-  .condo-card{ 
-    width: 402px; 
+  .category-sec .condo-card .cover{  
+    height: 180px;
+    background-size: 100%  auto !important;
+  } 
+  header nav .navbar-nav .nav-item .nav-link{ 
+    font-size: 20px; 
+    padding-left: 15px;
+    padding-right: 15px; 
   }
-} */
-
-
+} 
+@media only screen and (min-width: 1700px) {  
+  header{ 
+    padding-left: 80px;
+    padding-right: 80px;  
+  } 
+  .category-sec .condo-card .cover{  
+    height: 200px;
+    background-size: 100%  auto !important;
+  }
+  .category-sec .condo-card ul{
+    grid-template-columns: repeat(auto-fill,minmax(60px, 1fr));
+  }
+  header nav .navbar-nav .nav-item .nav-link{ 
+    font-size: 22px;  
+  }
+}
   
