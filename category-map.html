@@ -81,6 +81,7 @@
 			<a href="#">
 				<img src="images/sc4.png" alt="">
 			</a>
+			<button><i class="fas fa-comment-lines"></i></button>
 		</div>
 
 		<section class="category-sec">
@@ -1042,6 +1043,11 @@
 			$('.deal-type li').removeClass("active");
 			$(this).addClass("active");
 		});
+
+		$('.social-con').click(function() {
+    $( this ).toggleClass( "active", 500, "easeInSine" );
+    $(".social-con button i").toggleClass("fa-comment-lines fa-times"); 
+});
 
 		$(".map-arr").click(function() {
             $(".map-arr").toggleClass("active"); 
