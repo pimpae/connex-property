@@ -3401,8 +3401,12 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     padding-left: 80px;
     padding-right: 80px;  
   } 
+  .category-sec .condo-card{  
+    height: 567px; 
+    max-width: 400px !important;
+  }
   .category-sec .condo-card .cover{  
-    height: 200px;
+    height: 250px;
     background-size: 100%  auto !important;
   }
   .category-sec .condo-card ul{
