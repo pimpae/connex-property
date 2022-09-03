@@ -2551,6 +2551,35 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
  
 @media only screen and (max-width: 991px) { /* MOBILE */ 
+  header .navbar-collapse{
+    background-color: #fff;
+  }
+  header .navbar-collapse form{
+    padding: 10px;
+  } 
+  header .navbar-collapse form input{
+    width: 100%;
+    height: 40px;
+  }
+  header .navbar-collapse form button{
+    top: 10px !important;
+    right: 10px !important;
+    height: 40px !important;
+  }
+  header nav .navbar-nav .nav-item .nav-link{ 
+    text-align: left;
+    padding-left: 20px;
+  }
+  header nav .navbar-nav .nav-item.active .nav-link{ 
+    color: #FFFFFF;
+    background: #5681BF;
+    border-radius: 40px;
+  }  
+  header nav .navbar-nav .nav-item  .dropdown-menu{ 
+    border: 1px solid rgba(0, 0, 0, 0) !important;
+    padding-left: 20px;
+  }
+  
   .benefits{ 
     background-size: auto 100% !important;   
   }
@@ -2663,6 +2692,7 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     flex-direction: unset !important;
     padding-left: 0px;
     justify-content: start !important;
+    padding-bottom: 10px;
   }
   .navbar-collapse .justify-content-end li{
     width: 60px !important; 
@@ -3345,7 +3375,7 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   }
   .information{  
     width: 100% !important;
-  }
+  } 
 }
 @media only screen and (width: 768px) { /* IPAD PRO */  
   .project-detail {
