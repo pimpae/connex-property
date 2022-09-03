@@ -187,27 +187,25 @@
 							<a href="#" class="btn btn-share">แชร์ <i class="fal fa-share-alt"></i></a>
 							<a href="#" class="btn btn-print">พิมพ์ <i class="fal fa-print"></i></a>
 
-							<div class="img-view" style="background: url(images/v1.png);" >
+							<div class="img-view" style="background: url(images/v1.png);" > </div>
 
-								<div class="box-view">
-									<div class="box-view-type" data-tab="view360">
-										<div style="background: url(images/v3.png);">
-											<img src="images/360.png" alt="">
-										</div>
-										<h3>ดูภาพ 360 เสมือนจริง</h3>
+							<div class="box-view">
+								<div class="box-view-type" data-tab="view360">
+									<div style="background: url(images/v3.png);">
+										<img src="images/360.png" alt="">
 									</div>
-									<div class="box-view-type" data-tab="streetview">
-										<div style="background: url(images/v3.png);"></div>
-										<h3>สตรีท วิว</h3>
-									</div>
-									<div class="box-view-type" data-tab="localtion">
-										<div style="background: url(images/v3.png);"></div>
-										<h3>ทำเลที่ตั้ง</h3>
-									</div> 
+									<h3>ดูภาพ 360 เสมือนจริง</h3>
 								</div>
-
-
+								<div class="box-view-type" data-tab="streetview">
+									<div style="background: url(images/v3.png);"></div>
+									<h3>สตรีท วิว</h3>
+								</div>
+								<div class="box-view-type" data-tab="localtion">
+									<div style="background: url(images/v3.png);"></div>
+									<h3>ทำเลที่ตั้ง</h3>
+								</div> 
 							</div>
+
 						</div>
 						<div class="col-xl-3 img-view-sub">
 							<div style="background: url(images/v3.png);" data-num="2"></div>
@@ -1512,7 +1510,7 @@
 	</footer>
 
 	<div class="modal fade" id="viewImg">
-		<div class="modal-dialog modal-xl modal-dialog-centered">
+		<div class="modal-dialog modal-xl">
 			<div class="modal-content">
 				<!-- Modal Header -->
 				<div class="modal-header"> 
@@ -1589,16 +1587,19 @@
 	
 	<script>
 
-		$('.box-view .box-view-type').click(function() {   
+		$('.box-view .box-view-type').click(function() {    
 			$('#viewImg').modal('show'); 
-			$('#viewImg .nav .nav-item a').removeClass('active');
-			$('#viewImg .nav .nav-item a.'+$(this).attr("data-tab")).addClass('active'); 
+			$('#viewImg ul li .nav-link').removeClass('active');
+			$('#viewImg ul li .nav-link.'+$(this).attr("data-tab")).addClass('active');    
 			$('#viewImg .tab-content .tab-pane').removeClass('in active');
 			$('#viewImg .tab-content .tab-pane#'+$(this).attr("data-tab")).addClass('in active show');
+
+			
 		});
 
-		$('.img-view').click(function() {   
+		$('.img-view').click(function() {     
 			$('#viewImg').modal('show'); 
+
 			$('#viewImg .nav .nav-item a').removeClass('active');
 			$('#viewImg .nav .nav-item a.photo').addClass('active'); 
 			$('#viewImg .tab-content .tab-pane').removeClass('in active');
