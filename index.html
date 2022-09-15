@@ -144,7 +144,81 @@
 
 				<div class="row justify-content-center">
 					<div class="col-xl-10">
-						<ul id="item2" class="item2">
+
+						
+						<div class="row pc-x"> 
+
+							<div class="col-12">   
+								<div id="item_box2" class="carousel slide" data-ride="carousel"> 
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<a href="#">
+												<div class="img-cover1" style="background: url(images/ss1.png);">
+													<div class="des1">
+														<h5>Looking for property in</h5>
+														<h3>Bangkok</h3>
+													</div>
+												</div>
+											</a>  
+										</div>  
+										<div class="carousel-item">
+											<a href="#">
+												<div class="img-cover2" style="background: url(images/ss1.png);"> 
+													<div class="des2">
+														<h3>Sathon</h3>
+														<h5>463 Properties for you</h5>
+													</div>
+												</div> 
+											</a>
+											<a href="#">
+												<div class="img-cover2" style="background: url(images/ss1.png);"> 
+													<div class="des2">
+														<h3>Sathon</h3>
+														<h5>463 Properties for you</h5>
+													</div>
+												</div> 
+											</a>
+										</div>  
+										<div class="carousel-item">
+											<a href="#">
+												<div class="img-cover2" style="background: url(images/ss1.png);"> 
+													<div class="des2">
+														<h3>Sathon</h3>
+														<h5>463 Properties for you</h5>
+													</div>
+												</div> 
+											</a>
+											<a href="#">
+												<div class="img-cover2" style="background: url(images/ss1.png);"> 
+													<div class="des2">
+														<h3>Sathon</h3>
+														<h5>463 Properties for you</h5>
+													</div>
+												</div> 
+											</a>
+										</div>  
+										<div class="carousel-item">
+											<a href="#">
+												<div class="img-cover1" style="background: url(images/ss1.png);">
+													<div class="des1">
+														<h5>Looking for property in</h5>
+														<h3>Bangkok</h3>
+													</div>
+												</div>
+											</a>  
+										</div>  
+									</div> 
+									<a class="carousel-control-prev" href="#item_box2" data-slide="prev">
+										<span class="carousel-control-prev-icon"></span>
+									</a>
+									<a class="carousel-control-next" href="#item_box2" data-slide="next">
+										<span class="carousel-control-next-icon"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<ul id="item2" class="item2 mb-x">
 							<li>
 								<a href="#">
 									<div class="img-cover1" style="background: url(images/ss1.png);">
@@ -224,7 +298,7 @@
 									<div class="img-cover1" style="background: url(images/ss1.png);">
 										<div class="des1">
 											<h5>Looking for property in</h5>
-											<h3>Bangkok</h3>
+											<h3>Bangkokz</h3>
 										</div>
 									</div>
 								</a>  
@@ -1520,11 +1594,17 @@
 						settings: {
 							item:3 
 						}
-					},  
+					},   
 					{
-						breakpoint:1550,
+						breakpoint:1500,
 						settings: {
-							item:2 
+							item:2
+						}
+					},
+					{
+						breakpoint:1450,
+						settings: {
+							item:2
 						}
 					},
 					{
@@ -1566,11 +1646,17 @@
 						settings: {
 							item:3 
 						}
-					},  
+					},   
 					{
-						breakpoint:1550,
+						breakpoint:1500,
 						settings: {
-							item:2 
+							item:2
+						}
+					},
+					{
+						breakpoint:1450,
+						settings: {
+							item:2
 						}
 					},
 					{
@@ -1612,11 +1698,17 @@
 						settings: {
 							item:3 
 						}
-					},  
+					},   
 					{
-						breakpoint:1550,
+						breakpoint:1500,
 						settings: {
-							item:2 
+							item:2
+						}
+					},
+					{
+						breakpoint:1450,
+						settings: {
+							item:2
 						}
 					},
 					{
@@ -1716,6 +1808,10 @@
 			});   
 		});
 
+		$('#item_box2.carousel').carousel({
+			interval: 500000,
+			wrap: false 
+		})
 		 
 	</script>
 	
