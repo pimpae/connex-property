@@ -2781,7 +2781,9 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   #view360 img{
     height: auto !important;
   }
-    
+  #photo .w-100 .btn { 
+    font-size: 12px;
+  }
   header .navbar-collapse{
     background-color: #fff;
   }
