@@ -2739,7 +2739,17 @@ iframe{
 .all-viewx img{
   cursor: pointer !important; 
 }
-  
+.frame-carousel{
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #1F4B8A;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
    
 /* 
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
@@ -2763,6 +2773,11 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 */
 
 @media only screen and (max-width: 991px) { /* MOBILE */ 
+  .frame-carousel{
+    width: 28px;
+    height: 28px; 
+    font-size: 13px;
+  } 
   #view360 img{
     height: auto !important;
   }
