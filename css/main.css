@@ -1226,7 +1226,7 @@ footer .bot-menu span{
   padding-bottom: 45px;
 }
 iframe{
-  border-radius: 10px;
+  /* border-radius: 10px; */
   filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1));
 }
 .h11{
@@ -2665,9 +2665,81 @@ iframe{
   background-size: 11px 20px !important; 
 }
 
-/* 
-transition: .33s all ease-out;
-*/
+.modal .carousel-indicators {  
+  margin-bottom: -75px;
+}
+ 
+.modal .carousel-indicators li, .carousel-indicators li.active{  
+  width: 7.2vh;
+  height: 5.4vh;
+  background-color: #fff;
+  position: relative;
+  margin: 5px;      
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 100% !important;
+}
+.modal .carousel-indicators .carousel-item img{  
+  height: calc(100vh - 90px);
+}
+.modal-header .close {
+  padding: 1rem 0.5rem; 
+}
+
+.d-flx-combo{
+  height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#streetview iframe{
+  height: calc(100vh - 90px);
+}
+#localtion iframe{
+  height: calc(100vh - 90px);
+}
+#view360{
+  height: calc(100vh - 90px);
+}
+#view360 img{
+  height: 100% !important;
+}
+#photo .w-100{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-start;
+  z-index: 11 !important;
+  width: 100%;
+}
+#photo .w-100 .btn{
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+} 
+#photo .all-viewx{
+  display: none;
+}
+#photo .carouselx{
+  display: none;
+}
+  
+#photo .all-viewx.active{
+  display: block;
+  z-index: -1 !important;
+}
+#photo .carouselx.active{
+  display: block;
+  z-index: 2 !important;
+}
+.all-viewx img{
+  cursor: pointer !important; 
+}
+  
    
 /* 
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
@@ -2690,13 +2762,11 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE  
 */
 
-
-
-
-
-
- 
 @media only screen and (max-width: 991px) { /* MOBILE */ 
+  #view360 img{
+    height: auto !important;
+  }
+    
   header .navbar-collapse{
     background-color: #fff;
   }

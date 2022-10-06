@@ -2151,7 +2151,7 @@
 		</div>
 	</footer>
 
-	<div class="modal fade" id="viewImg">
+	<div class="modal fade" id="viewImg" style="padding-right: 0px !important">
 		<div class="modal-dialog modal-xl">
 			<div class="modal-content">
 				<!-- Modal Header -->
@@ -2175,37 +2175,78 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<!-- Modal body -->
-				<div class="modal-body">   
+				<div class="modal-body p-0">   
 					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane fade" id="photo"> 
-							<div id="demo" class="carousel slide" data-ride="carousel"> 
-								<div class="carousel-inner">
-									<div class="carousel-item active" id="1">
-										<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
-									</div>
-									<div class="carousel-item" id="2">
-										<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
-									</div>
-									<div class="carousel-item" id="3">
-										<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto">
-									</div>
-									<div class="carousel-item" id="4">
-										<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
-									</div>
-									<div class="carousel-item" id="5">
-										<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
-									</div>
-								</div> 
-								<a class="carousel-control-prev" href="#demo" data-slide="prev">
-									<span class="carousel-control-prev-icon"></span>
-								</a>
-								<a class="carousel-control-next" href="#demo" data-slide="next">
-									<span class="carousel-control-next-icon"></span>
-								</a>
+						<div role="tabpanel" class="tab-pane fade" id="photo">  
+							<div class="w-100 text-center">
+								<button class="btn" id="btn-photo"><i class="fas fa-th"></i> View all photos</button> 
 							</div>
+							<div class="col p-0">
+								<div class="d-flx-combo w-100 carouselx active"> 
+									<div id="demo" class="carousel slide" data-ride="carousel"> 
+
+										<ol class="carousel-indicators">
+											<li data-target="#demo" data-slide-to="0" class="active" style="background: url(images/cd1.jpg)"></li>
+											<li data-target="#demo" data-slide-to="1" style="background: url(images/cd2.jpg)"></li>
+											<li data-target="#demo" data-slide-to="2" style="background: url(images/cd3.jpg)"></li>
+											<li data-target="#demo" data-slide-to="3" style="background: url(images/cd1.jpg)"></li>
+											<li data-target="#demo" data-slide-to="4" style="background: url(images/cd2.jpg)"></li>
+										</ol>
+										
+										<div class="carousel-inner">
+											<div class="carousel-item active" id="1">
+												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="2">
+												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="3">
+												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="4">
+												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="5">
+												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+										</div> 
+										<a class="carousel-control-prev" href="#demo" data-slide="prev">
+											<span class="carousel-control-prev-icon"></span>
+										</a>
+										<a class="carousel-control-next" href="#demo" data-slide="next">
+											<span class="carousel-control-next-icon"></span>
+										</a>
+									</div>
+								</div>
+								<div class="all-viewx">
+									<div class="col">
+										<div class="row">
+											<div class="col-4 p-1"> 
+												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto" id="1">
+											</div>
+											<div class="col-4 p-1"> 
+												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto" id="2">
+											</div>
+											<div class="col-4 p-1"> 
+												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto" id="3">
+											</div>
+											<div class="col-4 p-1"> 
+												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto" id="4">
+											</div>
+											<div class="col-4 p-1"> 
+												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto" id="5">
+											</div> 
+										</div>
+									</div>
+								</div>
+							</div> 
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="view360"> 
-							<img src="images/tu09tpc-a-large-bed-in-a-room.jpeg" alt="360 view" class="img-fluid d-block mx-auto">
+							<div class="col p-0">
+								<div class="d-flx-combo"> 
+									<img src="images/tu09tpc-a-large-bed-in-a-room.jpeg" alt="360 view" class="img-fluid d-block mx-auto">
+								</div>
+							</div>
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="streetview"> 
 							<iframe src="https://www.google.com/maps/embed?pb=!4v1661956197670!6m8!1m7!1sDwBAcLNyOu-kM7vrRWUyFw!2m2!1d13.75556326314968!2d100.4987443085563!3f199.3677!4f0!5f0.7820865974627469" width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -2301,10 +2342,27 @@
 			}
 		});
 
- 
+		$('#btn-photo').click(function() { 
+			$(".carouselx").removeClass("active");
+			$(".all-viewx").addClass("active"); 
+			$("#btn-photo").hide();  
+		});
 
- 
+		$('.all-viewx img').click(function() { 
+			$(".all-viewx").removeClass("active"); 
+			$(".carouselx").addClass("active");
+			$("#btn-photo").show();  
 
+			$("#demo .carousel-indicators li").removeClass("active");
+			$("#demo .carousel-indicators li:nth-child("+$(this).attr('id')+")").addClass("active");
+			
+			$("#demo .carousel-inner div").removeClass("active");
+			$("#demo .carousel-inner div:nth-child("+$(this).attr('id')+")").addClass("active");
+ 
+			
+		});
+ 
+	 
 	</script>
 
 
