@@ -2736,8 +2736,17 @@ iframe{
   display: block;
   z-index: 2 !important;
 }
-.all-viewx img{
+#photo .carousel-item img{
+  height: calc(100vh - 150px);
+
+}
+.all-viewx .col-4 div{
   cursor: pointer !important; 
+  width: 100%;
+  height: 350px;
+  background-position: center center !important;
+  background-size: 100% auto !important;
+  background-repeat: no-repeat !important; 
 }
 .frame-carousel{
   width: 48px;
@@ -2749,7 +2758,9 @@ iframe{
   justify-content: center;
   align-items: center;
 }
-
+.modal{
+  padding: 0px !important;
+}
    
 /* 
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 

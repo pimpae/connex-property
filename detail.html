@@ -2226,19 +2226,19 @@
 									<div class="col">
 										<div class="row">
 											<div class="col-4 p-1"> 
-												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto" id="1">
-											</div>
+												<div id="1" style="background: url(images/cd1.jpg);"></div>
+											</div> 
 											<div class="col-4 p-1"> 
-												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto" id="2">
-											</div>
+												<div id="2" style="background: url(images/cd2.jpg);"></div>
+											</div> 
 											<div class="col-4 p-1"> 
-												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto" id="3">
-											</div>
+												<div id="3" style="background: url(images/cd3.jpg);"></div>
+											</div> 
 											<div class="col-4 p-1"> 
-												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto" id="4">
-											</div>
+												<div id="4" style="background: url(images/cd1.jpg);"></div>
+											</div> 
 											<div class="col-4 p-1"> 
-												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto" id="5">
+												<div id="5" style="background: url(images/cd2.jpg);"></div>
 											</div> 
 										</div>
 									</div>
@@ -2290,6 +2290,8 @@
 
 		$('.img-view').click(function() {     
 			$('#viewImg').modal('show'); 
+			$(".all-viewx").removeClass("active"); 
+			$(".carouselx").addClass("active");
 
 			$('#viewImg .nav .nav-item a').removeClass('active');
 			$('#viewImg .nav .nav-item a.photo').addClass('active'); 
@@ -2302,9 +2304,13 @@
 			$('#viewImg .nav .nav-item a').removeClass('active');
 			$('#viewImg .nav .nav-item a.photo').addClass('active'); 
 			$('#viewImg .tab-content .tab-pane').removeClass('in active');
-			$('#viewImg .tab-content .tab-pane#photo').addClass('in active show');  
-			$('#viewImg .carousel-inner .carousel-item').removeClass('active');
-			$('#viewImg .carousel-inner .carousel-item#'+$(this).attr("data-num")).addClass('active'); 
+			$('#viewImg .tab-content .tab-pane#photo').addClass('in active show');   
+
+			$("#demo .carousel-indicators li").removeClass("active");
+			$("#demo .carousel-indicators li:nth-child("+$(this).attr('data-num')+")").addClass("active");
+
+			$("#demo .carousel-inner .carousel-item").removeClass("active");
+			$("#demo .carousel-inner .carousel-item:nth-child("+$(this).attr('data-num')+")").addClass("active");	
 		});
 
 
@@ -2352,7 +2358,7 @@
 			$("#btn-photo").hide();  
 		});
 
-		$('.all-viewx img').click(function() { 
+		$('.all-viewx .col-4 div').click(function() { 
 			$(".all-viewx").removeClass("active"); 
 			$(".carouselx").addClass("active");
 			$("#btn-photo").show();  
