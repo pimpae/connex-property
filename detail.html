@@ -2180,14 +2180,27 @@
 						<div role="tabpanel" class="tab-pane fade" id="photo">  
 							<div class="w-100 text-center">
 								<button class="btn" id="btn-photo"><i class="fas fa-th"></i> View all photos</button> 
-							</div>
- 
+							</div> 
+
 							
-							  
+  
 							<div class="col p-0">
 								<div class="d-flx-combo w-100 carouselx active"> 
 									<div id="demo" class="carousel slide carousel-fade" data-ride="carousel"> 
 										<p class="des-photo">45 Tudor City Place, Unit 901 | $599,000 | 1 Bed | 2 Baths </p>
+
+										<div class="btn-li">
+											<div class="prevx"><i class="fas fa-chevron-left"></i><input type="hidden" value="1"></div>   
+										</div> 
+										<div class="btn-li"> 
+											<div class="nextx"><i class="fas fa-chevron-right"></i><input type="hidden" value="1"></div> 
+										</div>
+										<div class="btn-span"> 
+											<span class="item-span">17 </span>&nbsp;of&nbsp;<span class="count-item"> 17</span>
+										</div>
+
+
+
 										<ol class="carousel-indicators" >
 											<li data-target="#demo" data-slide-to="0" class="active" style="background: url(images/cd1.jpg)"></li>
 											<li data-target="#demo" data-slide-to="1" style="background: url(images/cd2.jpg)"></li>
@@ -2198,9 +2211,13 @@
 											<li data-target="#demo" data-slide-to="6" style="background: url(images/cd2.jpg)"></li>
 											<li data-target="#demo" data-slide-to="7" style="background: url(images/cd3.jpg)"></li>
 											<li data-target="#demo" data-slide-to="8" style="background: url(images/cd1.jpg)"></li>
-											<li data-target="#demo" data-slide-to="9" style="background: url(images/cd2.jpg)"></li>
+											<li data-target="#demo" data-slide-to="9" style="background: url(images/cd2.jpg)"></li> 
+											<li data-target="#demo" data-slide-to="10" style="background: url(images/cd1.jpg)"></li> 
+											<li data-target="#demo" data-slide-to="11" style="background: url(images/cd2.jpg)"></li> 
+											<li data-target="#demo" data-slide-to="12" style="background: url(images/cd1.jpg)"></li>
 										</ol>
 										
+
 										<div class="carousel-inner">
 											<div class="carousel-item active" id="1">
 												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
@@ -2232,6 +2249,15 @@
 											<div class="carousel-item" id="10">
 												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
 											</div>
+											<div class="carousel-item" id="11">
+												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="12">
+												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="13">
+												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div> 
 										</div> 
 										<div class="range-img">
 											<div>
@@ -2305,6 +2331,60 @@
  
 
 	<script>
+ 
+
+ 		$(document).ready(function() { 
+			$(".carousel-indicators li").css("display","none");	 
+			$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block");	  
+			$(".prevx").css("display","none");	  
+			$('.count-item').text($('.carouselx .carousel-indicators li').length);
+			$('.item-span').text(1); 
+		});
+		
+		$(".carousel-indicators li").click(function (event) { 
+			var itemxspan = Number($(this).attr("data-slide-to")) + Number(1);    
+			$('.item-span').text(itemxspan);   
+		});
+
+		$(".nextx").click(function (event) {
+			var showx = 7; 
+			var startx = 1;
+			var itemx = $('.carouselx .carousel-indicators li').length; 
+			var laps = (itemx/showx).toFixed();  
+			var start_li = Number($(".nextx input").val()) + Number(startx);
+			var end_li = Number($(".nextx input").val()) + Number(showx);   
+			$(".nextx input").val(start_li);    
+			$(".prevx input").val(start_li); 
+			var counts = (itemx-showx); 
+			if($(".nextx input").val()>counts){
+				$(".nextx").css("display","none");
+			}   
+			if($(".nextx input").val()>1){
+				$(".prevx").css("display","block");
+			}   
+			$(".carousel-indicators li").css("display","none");	 
+			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
+		}); 
+		$(".prevx").click(function (event) {
+			var showx = 7; 
+			var startx = 1;
+			var itemx = $('.carouselx .carousel-indicators li').length; 
+			var laps = (itemx/showx).toFixed();  
+			var start_li = Number($(".nextx input").val()) - Number(startx);
+			var end_li = Number($(".nextx input").val()) + (Number(showx)-2);   
+			$(".nextx input").val(start_li);    
+			$(".prevx input").val(start_li);    
+			var counts = (itemx-showx);  
+			if($(".prevx input").val()==1){
+				$(".prevx").css("display","none"); 
+			}    
+			if($(".prevx input").val()==counts){
+				$(".nextx").css("display","block"); 
+			}     
+			$(".carousel-indicators li").css("display","none");	 
+			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
+		});
+
 
 		$("#minus").click(function (event) {
 			zoom("out");
@@ -2331,6 +2411,7 @@
 			
 		});
 
+		 
 		function zoom(direction) {
 			var slider = $("#range");
 			var step = parseFloat(slider.attr('step'), 1);
@@ -2354,7 +2435,7 @@
 		$("#compress-alt").click(function (event) {
 			$('#range').val(1);
 			$("#demo .carousel-inner .carousel-item img").css("transform", "scale(1)"); 
-				$(".range-img #compress-alt").removeClass("active"); 
+			$(".range-img #compress-alt").removeClass("active"); 
 		});
 
 
@@ -2387,6 +2468,8 @@
 
 			$("#demo .carousel-inner .carousel-item").removeClass("active");
 			$("#demo .carousel-inner .carousel-item:nth-child("+1+")").addClass("active");	
+
+			
 		});
 
 		$('.img-view-sub div').click(function() {    
@@ -2401,6 +2484,8 @@
 
 			$("#demo .carousel-inner .carousel-item").removeClass("active");
 			$("#demo .carousel-inner .carousel-item:nth-child("+$(this).attr('data-num')+")").addClass("active");	
+ 
+			$('.item-span').text($(this).attr("data-num"));   
 		});
 
 

@@ -2738,11 +2738,7 @@ iframe{
   display: block;
   z-index: 2 !important;
 }
-#photo .carousel-item img{
-  height: calc(100vh - 150px);
-  padding-bottom: 30px;
 
-}
 .all-viewx .col-4 div{
   cursor: pointer !important; 
   width: 100%;
@@ -2878,46 +2874,37 @@ input[type="range"]::-webkit-slider-thumb {
   height: 30px;
   color: #000;
   font-size: 20px;
+} 
+.nextx{
+  position: absolute;   
+  width: 20px; 
+  margin-left: 30%;
 }
 
-/* 
-
-#demo .carousel-indicators li:nth-child(n + 1):nth-child(-n + 7):after{
-  border: 2px solid yellowgreen;
-  background-color: yellowgreen;
-} 
-#demo .carousel-indicators li:nth-child(1):after{ 
-  content: "1";
-} 
-#demo .carousel-indicators li:nth-child(2):after{ 
-  content: "2";
-}
-#demo .carousel-indicators li:nth-child(3):after{ 
-  content: "3";
-} 
-#demo .carousel-indicators li:nth-child(4):after{ 
-  content: "4";
-} 
-#demo .carousel-indicators li:nth-child(5):after{ 
-  content: "5";
-} 
-#demo .carousel-indicators li:nth-child(6):after{ 
-  content: "6";
-}
-#demo .carousel-indicators li:nth-child(7):after{ 
-  content: "7";
-} 
-#demo .carousel-indicators li:nth-child(8):after{ 
-  content: "8";
-} 
-#demo .carousel-indicators li:nth-child(9):after{ 
-  content: "9";
-} 
-#demo .carousel-indicators li:nth-child(10):after{ 
-  content: "10";
+.prevx{
+  position: absolute;  
+  width: 20px; 
+  margin-right: 30%;
 }
 
- */
+.btn-li{
+  position: absolute;
+  bottom: -26px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  z-index: 111;
+}  
+.btn-span{
+  position: absolute;
+  bottom: -50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center; 
+  margin-left: 18%;
+}  
 
 
 
@@ -3873,6 +3860,9 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     grid-template-columns: unset !important;
     display: flex;
   }
+  .des-photo {
+    bottom: -50px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {   
@@ -3909,6 +3899,11 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     font-size: 20px; 
     padding-left: 15px;
     padding-right: 15px; 
+  }
+  #photo .carousel-item img{
+    height: calc(100vh - 150px);
+    padding-bottom: 30px;
+  
   }
 } 
 @media only screen and (min-width: 1700px) {  
@@ -3949,6 +3944,30 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   .mb-x{
     display: none !important;
   } 
+  .modal .carousel-indicators li, .carousel-indicators li.active { 
+    background-size: 100% auto !important;
+  }
+  .carousel-indicators{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: -100px !important;
+  }
+  .des-photo{
+    bottom: -55px;
+    font-size: 13px;
+  }
+  .prevx{
+    left: 20px;
+  }
+  .nextx{
+    right: 20px;
+  }
+  .btn-li { 
+    bottom: -50px; 
+  }
+  .btn-span{
+    display: none;
+  }
 }
 @media only screen and (min-width: 992px) { /* PC */
   .pc-x{
