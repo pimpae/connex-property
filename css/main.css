@@ -2854,11 +2854,11 @@ input[type="range"]::-webkit-slider-thumb {
   z-index: 20;
   background-color: #fff;
 }
-.carousel-inner{
+.modal .carousel-inner{
   overflow: visible;
   z-index: 11;
 } 
-.carousel-indicators{ 
+.modal .carousel-indicators{ 
   z-index: 11;
 } 
 .des-photo{
@@ -2868,20 +2868,63 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: center;
   width: 100%;
   text-align: center;
+}  
+#demo .carousel-indicators li:after{
+  content: "";
+  position: relative; 
+  margin-top: -25px;
+  left: 2000%;
+  width: 30px;
+  height: 30px;
+  color: #000;
+  font-size: 20px;
+}
+
+/* 
+
+#demo .carousel-indicators li:nth-child(n + 1):nth-child(-n + 7):after{
+  border: 2px solid yellowgreen;
+  background-color: yellowgreen;
 } 
+#demo .carousel-indicators li:nth-child(1):after{ 
+  content: "1";
+} 
+#demo .carousel-indicators li:nth-child(2):after{ 
+  content: "2";
+}
+#demo .carousel-indicators li:nth-child(3):after{ 
+  content: "3";
+} 
+#demo .carousel-indicators li:nth-child(4):after{ 
+  content: "4";
+} 
+#demo .carousel-indicators li:nth-child(5):after{ 
+  content: "5";
+} 
+#demo .carousel-indicators li:nth-child(6):after{ 
+  content: "6";
+}
+#demo .carousel-indicators li:nth-child(7):after{ 
+  content: "7";
+} 
+#demo .carousel-indicators li:nth-child(8):after{ 
+  content: "8";
+} 
+#demo .carousel-indicators li:nth-child(9):after{ 
+  content: "9";
+} 
+#demo .carousel-indicators li:nth-child(10):after{ 
+  content: "10";
+}
+
+ */
+
+
+
+
 
 
 /* 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 
