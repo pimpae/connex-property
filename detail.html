@@ -2181,16 +2181,24 @@
 							<div class="w-100 text-center">
 								<button class="btn" id="btn-photo"><i class="fas fa-th"></i> View all photos</button> 
 							</div>
+ 
+							
+							  
 							<div class="col p-0">
 								<div class="d-flx-combo w-100 carouselx active"> 
 									<div id="demo" class="carousel slide" data-ride="carousel"> 
-
+										<p class="des-photo">45 Tudor City Place, Unit 901 | $599,000 | 1 Bed | 2 Baths </p>
 										<ol class="carousel-indicators">
 											<li data-target="#demo" data-slide-to="0" class="active" style="background: url(images/cd1.jpg)"></li>
 											<li data-target="#demo" data-slide-to="1" style="background: url(images/cd2.jpg)"></li>
 											<li data-target="#demo" data-slide-to="2" style="background: url(images/cd3.jpg)"></li>
 											<li data-target="#demo" data-slide-to="3" style="background: url(images/cd1.jpg)"></li>
 											<li data-target="#demo" data-slide-to="4" style="background: url(images/cd2.jpg)"></li>
+											<li data-target="#demo" data-slide-to="5" style="background: url(images/cd1.jpg)"></li>
+											<li data-target="#demo" data-slide-to="6" style="background: url(images/cd2.jpg)"></li>
+											<li data-target="#demo" data-slide-to="7" style="background: url(images/cd3.jpg)"></li>
+											<li data-target="#demo" data-slide-to="8" style="background: url(images/cd1.jpg)"></li>
+											<li data-target="#demo" data-slide-to="9" style="background: url(images/cd2.jpg)"></li>
 										</ol>
 										
 										<div class="carousel-inner">
@@ -2209,7 +2217,30 @@
 											<div class="carousel-item" id="5">
 												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
 											</div>
+											<div class="carousel-item" id="6">
+												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="7">
+												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="8">
+												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="9">
+												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
+											<div class="carousel-item" id="10">
+												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
+											</div>
 										</div> 
+										<div class="range-img">
+											<div>
+												<button id="minus">-</button>
+												<input id="range" type="range" min="1" max="2" step="0.2"  value="1">
+												<button id="plus">+</button>
+											</div>
+											<button id="compress-alt"><i class="far fa-compress-alt"></i></button>
+										</div>
 										<a class="carousel-control-prev" href="#demo" data-slide="prev">
 											<div class="frame-carousel"> 
 												<i class="far fa-chevron-left"></i>
@@ -2274,6 +2305,59 @@
  
 
 	<script>
+
+		$("#minus").click(function (event) {
+			zoom("out");
+		});
+
+		$("#plus").click(function (event) {
+			zoom("in");
+		});
+
+		$("#range").on('input change', function (event) {
+			$('#output').text($(event.currentTarget).val()); 
+			$("#demo .carousel-inner .carousel-item img").css("transform", "scale("+$(event.currentTarget).val()+")"); 
+ 
+
+			if ($(event.currentTarget).val() == 1) {
+				$(".range-img #compress-alt").removeClass("active"); 
+				$(".carousel-control-prev").css("display", "flex"); 
+				$(".carousel-control-next").css("display", "flex"); 
+			} else {
+				$(".range-img #compress-alt").addClass("active"); 
+				$(".carousel-control-prev").css("display", "none"); 
+				$(".carousel-control-next").css("display", "none"); 
+			} 
+			
+		});
+
+		function zoom(direction) {
+			var slider = $("#range");
+			var step = parseFloat(slider.attr('step'), 1);
+			var currentSliderValue = parseFloat(slider.val(), 1);
+			var newStepValue = currentSliderValue + step;
+
+			if (direction === "out") {
+				newStepValue = currentSliderValue - step;
+			} else {
+				newStepValue = currentSliderValue + step;
+			} 
+			slider.val(newStepValue).change(); 
+
+			if (newStepValue == 1) {
+				$(".range-img #compress-alt").removeClass("active"); 
+			} else {
+				$(".range-img #compress-alt").addClass("active"); 
+			} 
+		};
+
+		$("#compress-alt").click(function (event) {
+			$('#range').val(1);
+			$("#demo .carousel-inner .carousel-item img").css("transform", "scale(1)"); 
+				$(".range-img #compress-alt").removeClass("active"); 
+		});
+
+
 		$('.carousel').carousel({
 			interval: 5000000
 		})
@@ -2297,6 +2381,12 @@
 			$('#viewImg .nav .nav-item a.photo').addClass('active'); 
 			$('#viewImg .tab-content .tab-pane').removeClass('in active');
 			$('#viewImg .tab-content .tab-pane#photo').addClass('in active show');
+
+			$("#demo .carousel-indicators li").removeClass("active");
+			$("#demo .carousel-indicators li:nth-child("+1+")").addClass("active");
+
+			$("#demo .carousel-inner .carousel-item").removeClass("active");
+			$("#demo .carousel-inner .carousel-item:nth-child("+1+")").addClass("active");	
 		});
 
 		$('.img-view-sub div').click(function() {    
