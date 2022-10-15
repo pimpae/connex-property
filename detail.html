@@ -2262,17 +2262,17 @@
 										<div class="range-img">
 											<div>
 												<button id="minus">-</button>
-												<input id="range" type="range" min="1" max="2" step="0.2"  value="1">
+												<input id="range" type="range" min="1" max="2" step="0.1"  value="1">
 												<button id="plus">+</button>
 											</div>
 											<button id="compress-alt"><i class="far fa-compress-alt"></i></button>
 										</div>
-										<a class="carousel-control-prev" href="#demo" data-slide="prev">
+										<a class="carousel-control-prev prevxx" href="#demo" data-slide="prev" >
 											<div class="frame-carousel"> 
 												<i class="far fa-chevron-left"></i>
 											</div>
 										</a>
-										<a class="carousel-control-next" href="#demo" data-slide="next">
+										<a class="carousel-control-next nextxx" href="#demo" data-slide="next">
 											<div class="frame-carousel"> 
 												<i class="far fa-chevron-right"></i>
 											</div>
@@ -2344,28 +2344,73 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"  ></script>
  
-
+	
 	<script>
- 
-
- 		$(document).ready(function() { 
-			$(".carousel-indicators li").css("display","none");	 
-			$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block");	  
-			$(".prevx").css("display","none");	  
-			$('.count-item').text($('.carouselx .carousel-indicators li').length);
-			$('.item-span').text(1); 
-		});
 		
-		$(".carousel-indicators li").click(function (event) { 
-			var itemxspan = Number($(this).attr("data-slide-to")) + Number(1);    
-			$('.item-span').text(itemxspan);   
+		$(document).ready(function() { 
+			$('.prevxx').click(function(){ 
+				var itemx = $('.carouselx .carousel-indicators li').length;      
+				var nex_v = $(".carousel-indicators li.active").attr("data-slide-to");  
+				if(nex_v<itemx-8){   
+					$.prevTum();
+				}   
+				var itemxspan = Number($(".carousel-indicators li.active").attr("data-slide-to")) + Number(2);    
+				$('.item-span').text(itemxspan);
+			});
+			$('.nextxx').click(function(){   
+				var itemx = $('.carouselx .carousel-indicators li').length;       
+				var nex_v = $(".carousel-indicators li.active").index(".carousel-indicators li"); 
+				if(nex_v<itemx-8){   
+					$.nextTum();
+				}   
+				var itemxspan = Number($(".carousel-indicators li.active").attr("data-slide-to")) + Number(2);    
+				$('.item-span').text(itemxspan);
+			});
 		});
 
-		$(".nextx").click(function (event) {
+
+		$.nextTum = (function() {    
 			var showx = 7; 
 			var startx = 1;
-			var itemx = $('.carouselx .carousel-indicators li').length; 
-			var laps = (itemx/showx).toFixed();  
+			var itemx = $('.carouselx .carousel-indicators li').length;  
+			var start_li = Number($(".nextx input").val()) + Number(startx);
+			var end_li = Number($(".nextx input").val()) + Number(showx);   
+			$(".nextx input").val(start_li);    
+			$(".prevx input").val(start_li); 
+			var counts = (itemx-showx); 
+			if($(".nextx input").val()>counts){
+				$(".nextx").css("display","none");
+			}   
+			if($(".nextx input").val()>1){
+				$(".prevx").css("display","block");
+			}   
+			$(".carousel-indicators li").css("display","none");	 
+			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
+		});
+
+		$.prevTum = (function() {  
+			var showx = 7; 
+			var startx = 1;
+			var itemx = $('.carouselx .carousel-indicators li').length;  
+			var start_li = Number($(".nextx input").val()) - Number(startx);
+			var end_li = Number($(".nextx input").val()) + (Number(showx)-2);   
+			$(".nextx input").val(start_li);    
+			$(".prevx input").val(start_li);    
+			var counts = (itemx-showx);  
+			if($(".prevx input").val()==1){
+				$(".prevx").css("display","none"); 
+			}    
+			if($(".prevx input").val()==counts){
+				$(".nextx").css("display","block"); 
+			}     
+			$(".carousel-indicators li").css("display","none");	 
+			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
+		});
+
+		$(".nextx").click(function (event) { 
+			var showx = 7; 
+			var startx = 1;
+			var itemx = $('.carouselx .carousel-indicators li').length;  
 			var start_li = Number($(".nextx input").val()) + Number(startx);
 			var end_li = Number($(".nextx input").val()) + Number(showx);   
 			$(".nextx input").val(start_li);    
@@ -2383,8 +2428,7 @@
 		$(".prevx").click(function (event) {
 			var showx = 7; 
 			var startx = 1;
-			var itemx = $('.carouselx .carousel-indicators li').length; 
-			var laps = (itemx/showx).toFixed();  
+			var itemx = $('.carouselx .carousel-indicators li').length;  
 			var start_li = Number($(".nextx input").val()) - Number(startx);
 			var end_li = Number($(".nextx input").val()) + (Number(showx)-2);   
 			$(".nextx input").val(start_li);    
@@ -2398,6 +2442,19 @@
 			}     
 			$(".carousel-indicators li").css("display","none");	 
 			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
+		});
+
+		$(document).ready(function() { 
+			$(".carousel-indicators li").css("display","none");	 
+			$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block");	  
+			$(".prevx").css("display","none");	  
+			$('.count-item').text($('.carouselx .carousel-indicators li').length);
+			$('.item-span').text(1); 
+		});
+
+		$(".carousel-indicators li").click(function (event) { 
+		var itemxspan = Number($(this).attr("data-slide-to")) + Number(1);    
+		$('.item-span').text(itemxspan);   
 		});
 
 
