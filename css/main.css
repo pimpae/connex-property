@@ -2905,9 +2905,10 @@ input[type="range"]::-webkit-slider-thumb {
   width: 100%;
   text-align: center; 
   margin-left: 18%;
-}  
-
-
+}   
+#photo .carousel-item img{ 
+  transition: all .2s ease-in-out
+}
 
 
 
@@ -3978,6 +3979,9 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   }
   .all-viewx .col-4{
     padding: 2px !important;
+  }
+  .range-img { 
+    bottom: 0px; 
   }
 }
 @media only screen and (min-width: 992px) { /* PC */
