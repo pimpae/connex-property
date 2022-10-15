@@ -692,6 +692,7 @@ header nav .navbar-nav .nav-item:hover .nav-link{
   background-position:   center !important;
   background-repeat: no-repeat !important;
   background-size: 6.5px 13px !important;
+  transition: all .2s ease-in-out;
 }
 .owlm2 .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
   display: flex !important;
@@ -2772,7 +2773,7 @@ iframe{
   width: 100%;
   display: flex;
   justify-content: center;
-  bottom: 100px;
+  bottom: 30px;
   opacity: 0;
 }
 .range-img #compress-alt{
@@ -3967,6 +3968,16 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
   }
   .btn-span{
     display: none;
+  }
+  .all-viewx .col-4 div{
+    height: 90px;
+    background-size: auto 100%  !important;
+  }
+  .modal-header { 
+    padding: 1rem 5px; 
+  }
+  .all-viewx .col-4{
+    padding: 2px !important;
   }
 }
 @media only screen and (min-width: 992px) { /* PC */

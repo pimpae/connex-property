@@ -2169,7 +2169,7 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link localtion" href="#localtion" role="tab" data-toggle="tab">ทำเลที่ตั้ง</a>
-						</li>
+						</li> 
 					</ul>
 
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -2543,7 +2543,8 @@
 			
 			$("#demo .carousel-inner div").removeClass("active");
 			$("#demo .carousel-inner div:nth-child("+$(this).attr('id')+")").addClass("active");
- 
+			
+			$('.item-span').text($(this).attr('id'));   
 			
 		});
  
