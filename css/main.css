@@ -2909,8 +2909,11 @@ input[type="range"]::-webkit-slider-thumb {
 #photo .carousel-item img{ 
   transition: all .2s ease-in-out
 }
-
-
+.all-viewx .col-4 img{
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
 
 
 /* 
@@ -2925,6 +2928,13 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 */
 
 @media only screen and (max-width: 991px) { /* MOBILE */ 
+  
+  .all-viewx .col-4 img{
+    height: 90px;
+    width: 100%;
+    object-fit: cover;
+  }
+
   .frame-carousel{
     width: 28px;
     height: 28px; 

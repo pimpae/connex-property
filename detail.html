@@ -2282,35 +2282,35 @@
 								<div class="all-viewx">
 									<div class="col">
 										<div class="row">
-											<div class="col-4 p-1"> 
-												<div id="1" style="background: url(images/cd1.jpg);"></div>
+											<div class="col-4 p-1">  
+												<img id="2" src="images/cd1.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
 											<div class="col-4 p-1"> 
-												<div id="2" style="background: url(images/cd2.jpg);"></div>
+												<img id="2" src="images/home-2.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
-											<div class="col-4 p-1"> 
-												<div id="3" style="background: url(images/cd3.jpg);"></div>
+											<div class="col-4 p-1">  
+												<img id="3" src="images/cd3.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
-											<div class="col-4 p-1"> 
-												<div id="4" style="background: url(images/cd1.jpg);"></div>
+											<div class="col-4 p-1">  
+												<img id="4" src="images/cd1.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
-											<div class="col-4 p-1"> 
-												<div id="5" style="background: url(images/cd2.jpg);"></div>
+											<div class="col-4 p-1">  
+												<img id="5" src="images/home-2.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
-											<div class="col-4 p-1"> 
-												<div id="6" style="background: url(images/cd2.jpg);"></div>
+											<div class="col-4 p-1">  
+												<img id="6" src="images/home-2.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
-											<div class="col-4 p-1"> 
-												<div id="7" style="background: url(images/cd2.jpg);"></div>
+											<div class="col-4 p-1">  
+												<img id="7" src="images/home-2.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
-											<div class="col-4 p-1"> 
-												<div id="8" style="background: url(images/cd2.jpg);"></div>
+											<div class="col-4 p-1">  
+												<img id="8" src="images/cd2.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
-											<div class="col-4 p-1"> 
-												<div id="9" style="background: url(images/cd2.jpg);"></div>
+											<div class="col-4 p-1">  
+												<img id="9" src="images/cd2.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
-											<div class="col-4 p-1"> 
-												<div id="10" style="background: url(images/cd2.jpg);"></div>
+											<div class="col-4 p-1">  
+												<img id="10" src="images/cd2.jpg" alt="" class="img-fluid d-block m-auto">
 											</div> 
 										</div>
 									</div>
@@ -2347,28 +2347,52 @@
 	
 	<script>
 		
-		$(document).ready(function() { 
-			$('.prevxx').click(function(){ 
-				var itemx = $('.carouselx .carousel-indicators li').length;      
-				var nex_v = $(".carousel-indicators li.active").attr("data-slide-to");  
-				if(nex_v<itemx-8){   
-					$.prevTum();
+		$(document).ready(function() {  
+
+			$('.prevxx').click(function(){    
+				var itemxspan = $(".carousel-indicators li.active").attr("data-slide-to");      
+				if(itemxspan==0){
+					var itemx = $('.carouselx .carousel-indicators li').length;   
+					var minux = itemx-6; 
+					$(".carousel-indicators li").css("display","none");	 
+					$(".carousel-indicators li:nth-child(n+"+minux+"):nth-child(-n+"+itemx+")").css("display","block");   
+					$(".nextx input").val(Number(itemxspan)+7);
+					$(".prevx input").val(Number(itemxspan)+7);  
+				}     
+				else if(itemxspan<7){ 
+					$(".carousel-indicators li").css("display","none");	 
+					$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block");    
+					$(".nextx input").val(1);
+					$(".prevx input").val(1);  
 				}   
-				var itemxspan = Number($(".carousel-indicators li.active").attr("data-slide-to")) + Number(2);    
-				$('.item-span').text(itemxspan);
+				else{  
+					var minux = itemxspan-6;  
+					$(".carousel-indicators li").css("display","none");	 
+					$(".carousel-indicators li:nth-child(n+"+minux+"):nth-child(-n+"+itemxspan+")").css("display","block"); 
+					$(".nextx input").val(Number(minux));
+					$(".prevx input").val(Number(minux));  
+				} 
 			});
 			$('.nextxx').click(function(){   
 				var itemx = $('.carouselx .carousel-indicators li').length;       
-				var nex_v = $(".carousel-indicators li.active").index(".carousel-indicators li"); 
-				if(nex_v<itemx-8){   
-					$.nextTum();
-				}   
+				var nex_v = $(".carousel-indicators li.active").index(".carousel-indicators li");   
 				var itemxspan = Number($(".carousel-indicators li.active").attr("data-slide-to")) + Number(2);    
-				$('.item-span').text(itemxspan);
+				if(nex_v<itemx-7){   
+					$.nextTum();
+				}    
+				$('.item-span').text(itemxspan);     
+				if(itemxspan==itemx+1){   
+					$(".carousel-indicators li").css("display","none");	 
+					$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block"); 
+					$('.item-span').text("1");    
+					$(".nextx input").val(1);
+					$(".prevx input").val(1);  
+				}  
 			});
 		});
 
 
+ 
 		$.nextTum = (function() {    
 			var showx = 7; 
 			var startx = 1;
@@ -2384,25 +2408,6 @@
 			if($(".nextx input").val()>1){
 				$(".prevx").css("display","block");
 			}   
-			$(".carousel-indicators li").css("display","none");	 
-			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
-		});
-
-		$.prevTum = (function() {  
-			var showx = 7; 
-			var startx = 1;
-			var itemx = $('.carouselx .carousel-indicators li').length;  
-			var start_li = Number($(".nextx input").val()) - Number(startx);
-			var end_li = Number($(".nextx input").val()) + (Number(showx)-2);   
-			$(".nextx input").val(start_li);    
-			$(".prevx input").val(start_li);    
-			var counts = (itemx-showx);  
-			if($(".prevx input").val()==1){
-				$(".prevx").css("display","none"); 
-			}    
-			if($(".prevx input").val()==counts){
-				$(".nextx").css("display","block"); 
-			}     
 			$(".carousel-indicators li").css("display","none");	 
 			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
 		});
@@ -2605,7 +2610,7 @@
 			$("#btn-photo").hide();  
 		});
 
-		$('.all-viewx .col-4 div').click(function() { 
+		$('.all-viewx .col-4 img').click(function() { 
 			$(".all-viewx").removeClass("active"); 
 			$(".carouselx").addClass("active");
 			$("#btn-photo").show();  
@@ -2613,8 +2618,8 @@
 			$("#demo .carousel-indicators li").removeClass("active");
 			$("#demo .carousel-indicators li:nth-child("+$(this).attr('id')+")").addClass("active");
 			
-			$("#demo .carousel-inner div").removeClass("active");
-			$("#demo .carousel-inner div:nth-child("+$(this).attr('id')+")").addClass("active");
+			$("#demo .carousel-inner img").removeClass("active");
+			$("#demo .carousel-inner img:nth-child("+$(this).attr('id')+")").addClass("active");
 			
 			$('.item-span').text($(this).attr('id'));   
 			
