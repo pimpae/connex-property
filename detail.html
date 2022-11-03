@@ -2213,6 +2213,11 @@
 											<li data-target="#demo" data-slide-to="6" style="background: url(images/cd1.jpg)"></li>
 											<li data-target="#demo" data-slide-to="7" style="background: url(images/cd2.jpg)"></li>
 											<li data-target="#demo" data-slide-to="8" style="background: url(images/cd3.jpg)"></li>  
+
+											
+											<li data-target="#demo" data-slide-to="9" style="background: url(images/cd1.jpg)"></li>
+											<li data-target="#demo" data-slide-to="10" style="background: url(images/cd2.jpg)"></li>
+											<li data-target="#demo" data-slide-to="11" style="background: url(images/cd3.jpg)"></li>  
 										</ol>
 										
 
@@ -2243,18 +2248,17 @@
 											</div>
 											<div class="carousel-item" id="9">
 												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
+											</div> 
+
+											
 											<div class="carousel-item" id="10">
 												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
 											</div>
 											<div class="carousel-item" id="11">
-												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
+												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto">
 											</div>
 											<div class="carousel-item" id="12">
-												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="13">
-												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto">
+												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
 											</div> 
 										</div> 
 										<div class="range-img">
@@ -2345,28 +2349,25 @@
 		$(document).ready(function() {  
 
 			$('.prevxx').click(function(){    
-				var itemxspan = $(".carousel-indicators li.active").attr("data-slide-to");      
-				if(itemxspan==0){
-					var itemx = $('.carouselx .carousel-indicators li').length;   
-					var minux = itemx-6; 
+				var itemx = $('.carouselx .carousel-indicators li').length;       
+				var nex_v = $(".carousel-indicators li.active").index(".carousel-indicators li");     
+				var end_li = (Number(itemx)-6);     
+				var itemxspan = $(".carousel-indicators li.active").index(".carousel-indicators li");     
+
+				if(itemxspan<7){    
 					$(".carousel-indicators li").css("display","none");	 
-					$(".carousel-indicators li:nth-child(n+"+minux+"):nth-child(-n+"+itemx+")").css("display","block");   
-					$(".nextx input").val(Number(itemxspan)+7);
-					$(".prevx input").val(Number(itemxspan)+7);  
-				}     
-				else if(itemxspan<7){ 
+					$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block");  
+				}    
+				$('.item-span').text(itemxspan);
+				if(nex_v==0){    
 					$(".carousel-indicators li").css("display","none");	 
-					$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block");    
-					$(".nextx input").val(1);
-					$(".prevx input").val(1);  
-				}   
-				else{  
-					var minux = itemxspan-6;  
-					$(".carousel-indicators li").css("display","none");	 
-					$(".carousel-indicators li:nth-child(n+"+minux+"):nth-child(-n+"+itemxspan+")").css("display","block"); 
-					$(".nextx input").val(Number(minux));
-					$(".prevx input").val(Number(minux));  
-				} 
+					$(".carousel-indicators li:nth-child(n+"+end_li+"):nth-child(-n+"+itemx+")").css("display","block"); 
+					$(".carousel-indicators li:nth-child(9)").addClass("active"); 
+					$('.item-span').text(itemx);    
+					$(".nextx input").val(end_li);
+					$(".prevx input").val(end_li);  
+				}  
+
 			});
 			$('.nextxx').click(function(){   
 				var itemx = $('.carouselx .carousel-indicators li').length;       
@@ -2376,9 +2377,10 @@
 					$.nextTum();
 				}    
 				$('.item-span').text(itemxspan);     
-				if(itemxspan==itemx+1){   
+				if(itemxspan==itemx+1){    
 					$(".carousel-indicators li").css("display","none");	 
 					$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block"); 
+					$(".carousel-indicators li:nth-child(1)").addClass("active"); 
 					$('.item-span').text("1");    
 					$(".nextx input").val(1);
 					$(".prevx input").val(1);  
@@ -2387,7 +2389,24 @@
 		});
 
 
- 
+		// $.prevTum = (function() {    
+		// 	var showx = 7; 
+		// 	var startx = 1;
+		// 	var itemx = $('.carouselx .carousel-indicators li').length;  
+		// 	var start_li = Number($(".nextx input").val()) - Number(startx);
+		// 	var end_li = Number($(".nextx input").val()) + (Number(showx)-2);   
+		// 	$(".nextx input").val(start_li);    
+		// 	$(".prevx input").val(start_li);    
+		// 	var counts = (itemx-showx);  
+		// 	if($(".prevx input").val()==1){
+		// 		$(".prevx").css("display","none"); 
+		// 	}    
+		// 	if($(".prevx input").val()==counts){
+		// 		$(".nextx").css("display","block"); 
+		// 	}     
+		// 	$(".carousel-indicators li").css("display","none");	 
+		// 	$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
+		// });
 		$.nextTum = (function() {    
 			var showx = 7; 
 			var startx = 1;
