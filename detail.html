@@ -12,6 +12,7 @@
     <title> Connex Property </title> 
  
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
+    <link href="css/slideshow.css" rel="stylesheet" type="text/css" />   
 	 
 </head>
 <body>
@@ -2182,103 +2183,58 @@
 								<button class="btn" id="btn-photo"><i class="fas fa-th"></i> View all photos</button> 
 							</div> 
 
+
+							
 							
   
-							<div class="col p-0">
+							<div class="col p-0 ">
 								<div class="d-flx-combo w-100 carouselx active"> 
-									<div id="demo" class="carousel slide carousel-fade" data-ride="carousel"> 
-										<p class="des-photo">45 Tudor City Place, Unit 901 | $599,000 | 1 Bed | 2 Baths </p>
+									<p class="des-photo">45 Tudor City Place, Unit 901 | $599,000 | 1 Bed | 2 Baths </p>
+									<div class="btn-span"> 
+										<span class="item-span">1 </span>&nbsp;of&nbsp;<span class="count-item"> 17</span>
+									</div>
 
-										<div class="btn-li">
-											<div class="prevx"><i class="fas fa-chevron-left"></i><input type="hidden" value="1"></div>   
-										</div> 
-										<div class="btn-li"> 
-											<div class="nextx"><i class="fas fa-chevron-right"></i><input type="hidden" value="1"></div> 
+									<div class="range-img">
+										<div>
+											<button id="minus">-</button>
+											<input id="range" type="range" min="1" max="2" step="0.1"  value="1">
+											<button id="plus">+</button>
 										</div>
-										<div class="btn-span"> 
-											<span class="item-span">17 </span>&nbsp;of&nbsp;<span class="count-item"> 17</span>
+										<button id="compress-alt"><i class="far fa-compress-alt"></i></button>
+									</div>
+									
+									<div id="slideshow" class="fullscreen">
+										<!-- Below are the images in the gallery -->
+										<div id="img-1" data-img-id="1" class="img-wrapper active" style="background-image: url('images/cd1.jpg')"></div>
+										<div id="img-2" data-img-id="2" class="img-wrapper" style="background-image: url('images/cd2.jpg')"></div>
+										<div id="img-3" data-img-id="3" class="img-wrapper" style="background-image: url('images/cd3.jpg')"></div>
+										<div id="img-4" data-img-id="4" class="img-wrapper" style="background-image: url('images/cd1.jpg')"></div>
+										<div id="img-1" data-img-id="5" class="img-wrapper" style="background-image: url('images/cd2.jpg')"></div>
+										<div id="img-2" data-img-id="6" class="img-wrapper" style="background-image: url('images/cd3.jpg')"></div>
+										<div id="img-3" data-img-id="7" class="img-wrapper" style="background-image: url('images/cd1.jpg')"></div>
+										<div id="img-4" data-img-id="8" class="img-wrapper" style="background-image: url('images/home-2.jpg')"></div> 
+						
+										<!-- Below are the thumbnails of above images -->
+										<div class="thumbs-container bottom">
+											<div id="prev-btn" class="prev">
+												<i class="fa fa-chevron-left"></i>
+											</div>
+						
+											<ul class="thumbs">
+												<li data-thumb-id="1" class="thumb active" style="background-image: url('images/cd1.jpg')"></li>
+												<li data-thumb-id="2" class="thumb" style="background-image: url('images/cd2.jpg')"></li>
+												<li data-thumb-id="3" class="thumb" style="background-image: url('images/cd3.jpg')"></li>
+												<li data-thumb-id="4" class="thumb" style="background-image: url('images/cd1.jpg')"></li>
+												<li data-thumb-id="5" class="thumb" style="background-image: url('images/cd2.jpg')"></li>
+												<li data-thumb-id="6" class="thumb" style="background-image: url('images/cd3.jpg')"></li>
+												<li data-thumb-id="7" class="thumb" style="background-image: url('images/cd1.jpg')"></li>
+												<li data-thumb-id="8" class="thumb" style="background-image: url('images/home-2.jpg')"></li> 
+											</ul>
+						
+											<div id="next-btn" class="next">
+												<i class="fa fa-chevron-right"></i>
+											</div>
 										</div>
-
-
-
-										<ol class="carousel-indicators" >
-											<li data-target="#demo" data-slide-to="0" class="active" style="background: url(images/cd1.jpg)"></li>
-											<li data-target="#demo" data-slide-to="1" style="background: url(images/cd2.jpg)"></li>
-											<li data-target="#demo" data-slide-to="2" style="background: url(images/cd3.jpg)"></li> 
-
-											<li data-target="#demo" data-slide-to="3" style="background: url(images/cd1.jpg)"></li>
-											<li data-target="#demo" data-slide-to="4" style="background: url(images/cd2.jpg)"></li>
-											<li data-target="#demo" data-slide-to="5" style="background: url(images/cd3.jpg)"></li> 
-
-											<li data-target="#demo" data-slide-to="6" style="background: url(images/cd1.jpg)"></li>
-											<li data-target="#demo" data-slide-to="7" style="background: url(images/cd2.jpg)"></li>
-											<li data-target="#demo" data-slide-to="8" style="background: url(images/cd3.jpg)"></li>  
-
-											
-											<li data-target="#demo" data-slide-to="9" style="background: url(images/cd1.jpg)"></li>
-											<li data-target="#demo" data-slide-to="10" style="background: url(images/cd2.jpg)"></li>
-											<li data-target="#demo" data-slide-to="11" style="background: url(images/cd3.jpg)"></li>  
-										</ol>
-										
-
-										<div class="carousel-inner">
-											<div class="carousel-item active" id="1">
-												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="2">
-												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="3">
-												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="4">
-												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="5">
-												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="6">
-												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="7">
-												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="8">
-												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="9">
-												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div> 
-
-											
-											<div class="carousel-item" id="10">
-												<img src="images/cd2.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="11">
-												<img src="images/cd3.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div>
-											<div class="carousel-item" id="12">
-												<img src="images/cd1.jpg" alt="images" class="img-fluid d-block mx-auto">
-											</div> 
-										</div> 
-										<div class="range-img">
-											<div>
-												<button id="minus">-</button>
-												<input id="range" type="range" min="1" max="2" step="0.1"  value="1">
-												<button id="plus">+</button>
-											</div>
-											<button id="compress-alt"><i class="far fa-compress-alt"></i></button>
-										</div>
-										<a class="carousel-control-prev prevxx" href="#demo" data-slide="prev" >
-											<div class="frame-carousel"> 
-												<i class="far fa-chevron-left"></i>
-											</div>
-										</a>
-										<a class="carousel-control-next nextxx" href="#demo" data-slide="next">
-											<div class="frame-carousel"> 
-												<i class="far fa-chevron-right"></i>
-											</div>
-										</a>
 									</div>
 								</div>
 								<div class="all-viewx">
@@ -2306,11 +2262,8 @@
 												<img id="7" src="images/cd1.jpg" alt="" class="img-fluid d-block m-auto">
 											</div>  
 											<div class="col-4 p-1">  
-												<img id="8" src="images/cd2.jpg" alt="" class="img-fluid d-block m-auto">
-											</div>  
-											<div class="col-4 p-1">  
-												<img id="9" src="images/cd3.jpg" alt="" class="img-fluid d-block m-auto">
-											</div>  
+												<img id="8" src="images/home-2.jpg" alt="" class="img-fluid d-block m-auto">
+											</div>   
 										</div>
 									</div>
 								</div>
@@ -2344,137 +2297,33 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"  ></script>
  
 	
+	<script src="js/gallery.js"></script>
 	<script>
 		
-		$(document).ready(function() {  
-
-			$('.prevxx').click(function(){    
-				var itemx = $('.carouselx .carousel-indicators li').length;       
-				var nex_v = $(".carousel-indicators li.active").index(".carousel-indicators li");     
-				var end_li = (Number(itemx)-6);     
-				var itemxspan = $(".carousel-indicators li.active").index(".carousel-indicators li");     
-
-				if(itemxspan<7){    
-					$(".carousel-indicators li").css("display","none");	 
-					$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block");  
-				}    
-				$('.item-span').text(itemxspan);
-				if(nex_v==0){    
-					$(".carousel-indicators li").css("display","none");	 
-					$(".carousel-indicators li:nth-child(n+"+end_li+"):nth-child(-n+"+itemx+")").css("display","block"); 
-					$(".carousel-indicators li:nth-child(9)").addClass("active"); 
-					$('.item-span').text(itemx);    
-					$(".nextx input").val(end_li);
-					$(".prevx input").val(end_li);  
-				}  
-
-			});
-			$('.nextxx').click(function(){   
-				var itemx = $('.carouselx .carousel-indicators li').length;       
-				var nex_v = $(".carousel-indicators li.active").index(".carousel-indicators li");   
-				var itemxspan = Number($(".carousel-indicators li.active").attr("data-slide-to")) + Number(2);    
-				if(nex_v<itemx-7){   
-					$.nextTum();
-				}    
-				$('.item-span').text(itemxspan);     
-				if(itemxspan==itemx+1){    
-					$(".carousel-indicators li").css("display","none");	 
-					$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block"); 
-					$(".carousel-indicators li:nth-child(1)").addClass("active"); 
-					$('.item-span').text("1");    
-					$(".nextx input").val(1);
-					$(".prevx input").val(1);  
-				}  
-			});
-		});
-
-
-		// $.prevTum = (function() {    
-		// 	var showx = 7; 
-		// 	var startx = 1;
-		// 	var itemx = $('.carouselx .carousel-indicators li').length;  
-		// 	var start_li = Number($(".nextx input").val()) - Number(startx);
-		// 	var end_li = Number($(".nextx input").val()) + (Number(showx)-2);   
-		// 	$(".nextx input").val(start_li);    
-		// 	$(".prevx input").val(start_li);    
-		// 	var counts = (itemx-showx);  
-		// 	if($(".prevx input").val()==1){
-		// 		$(".prevx").css("display","none"); 
-		// 	}    
-		// 	if($(".prevx input").val()==counts){
-		// 		$(".nextx").css("display","block"); 
-		// 	}     
-		// 	$(".carousel-indicators li").css("display","none");	 
-		// 	$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
-		// });
-		$.nextTum = (function() {    
-			var showx = 7; 
-			var startx = 1;
-			var itemx = $('.carouselx .carousel-indicators li').length;  
-			var start_li = Number($(".nextx input").val()) + Number(startx);
-			var end_li = Number($(".nextx input").val()) + Number(showx);   
-			$(".nextx input").val(start_li);    
-			$(".prevx input").val(start_li); 
-			var counts = (itemx-showx); 
-			if($(".nextx input").val()>counts){
-				$(".nextx").css("display","none");
-			}   
-			if($(".nextx input").val()>1){
-				$(".prevx").css("display","block");
-			}   
-			$(".carousel-indicators li").css("display","none");	 
-			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
-		});
-
-		$(".nextx").click(function (event) { 
-			var showx = 7; 
-			var startx = 1;
-			var itemx = $('.carouselx .carousel-indicators li').length;  
-			var start_li = Number($(".nextx input").val()) + Number(startx);
-			var end_li = Number($(".nextx input").val()) + Number(showx);   
-			$(".nextx input").val(start_li);    
-			$(".prevx input").val(start_li); 
-			var counts = (itemx-showx); 
-			if($(".nextx input").val()>counts){
-				$(".nextx").css("display","none");
-			}   
-			if($(".nextx input").val()>1){
-				$(".prevx").css("display","block");
-			}   
-			$(".carousel-indicators li").css("display","none");	 
-			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
-		}); 
-		$(".prevx").click(function (event) {
-			var showx = 7; 
-			var startx = 1;
-			var itemx = $('.carouselx .carousel-indicators li').length;  
-			var start_li = Number($(".nextx input").val()) - Number(startx);
-			var end_li = Number($(".nextx input").val()) + (Number(showx)-2);   
-			$(".nextx input").val(start_li);    
-			$(".prevx input").val(start_li);    
-			var counts = (itemx-showx);  
-			if($(".prevx input").val()==1){
-				$(".prevx").css("display","none"); 
-			}    
-			if($(".prevx input").val()==counts){
-				$(".nextx").css("display","block"); 
-			}     
-			$(".carousel-indicators li").css("display","none");	 
-			$(".carousel-indicators li:nth-child(n+"+start_li+"):nth-child(-n+"+end_li+")").css("display","block"); 
-		});
+	  
 
 		$(document).ready(function() { 
 			$(".carousel-indicators li").css("display","none");	 
 			$(".carousel-indicators li:nth-child(n+1):nth-child(-n+7)").css("display","block");	  
 			$(".prevx").css("display","none");	  
-			$('.count-item').text($('.carouselx .carousel-indicators li').length);
+			$('.count-item').text($('.thumbs-container .thumbs li').length);
 			$('.item-span').text(1); 
 		});
 
-		$(".carousel-indicators li").click(function (event) { 
-		var itemxspan = Number($(this).attr("data-slide-to")) + Number(1);    
-		$('.item-span').text(itemxspan);   
+		$(".thumbs-container .thumbs li").click(function (event) {  
+			var itemxspan = $(this).attr("data-thumb-id");    
+			$('.item-span').text(itemxspan);   
 		});
+
+		$("#next-btn").click(function (event) {
+			var itemxspan = $(".thumbs-container .thumbs li.active").attr("data-thumb-id");     
+			$('.item-span').text(itemxspan);   
+		});
+		$("#prev-btn").click(function (event) {
+			var itemxspan = $(".thumbs-container .thumbs li.active").attr("data-thumb-id");     
+			$('.item-span').text(itemxspan);   
+		});
+		
 
 
 		$("#minus").click(function (event) {
@@ -2487,9 +2336,8 @@
 
 		$("#range").on('input change', function (event) {
 			$('#output').text($(event.currentTarget).val()); 
-			$("#demo .carousel-inner .carousel-item img").css("transform", "scale("+$(event.currentTarget).val()+")"); 
- 
-
+			$("#slideshow .img-wrapper").css("transform", "scale("+$(event.currentTarget).val()+")"); 
+  
 			if ($(event.currentTarget).val() == 1) {
 				$(".range-img #compress-alt").removeClass("active"); 
 				$(".carousel-control-prev").css("display", "flex"); 
@@ -2498,10 +2346,8 @@
 				$(".range-img #compress-alt").addClass("active"); 
 				$(".carousel-control-prev").css("display", "none"); 
 				$(".carousel-control-next").css("display", "none"); 
-			} 
-			
-		});
-
+			}  
+		}); 
 		 
 		function zoom(direction) {
 			var slider = $("#range");
@@ -2525,7 +2371,7 @@
 
 		$("#compress-alt").click(function (event) {
 			$('#range').val(1);
-			$("#demo .carousel-inner .carousel-item img").css("transform", "scale(1)"); 
+			$("#slideshow .img-wrapper").css("transform", "scale(1)"); 
 			$(".range-img #compress-alt").removeClass("active"); 
 		});
 
@@ -2554,11 +2400,11 @@
 			$('#viewImg .tab-content .tab-pane').removeClass('in active');
 			$('#viewImg .tab-content .tab-pane#photo').addClass('in active show');
 
-			$("#demo .carousel-indicators li").removeClass("active");
-			$("#demo .carousel-indicators li:nth-child("+1+")").addClass("active");
+			$("#slideshow .img-wrapper").removeClass("active");
+			$("#slideshow .img-wrapper:nth-child("+1+")").addClass("active");
 
-			$("#demo .carousel-inner .carousel-item").removeClass("active");
-			$("#demo .carousel-inner .carousel-item:nth-child("+1+")").addClass("active");	
+			$(".thumbs-container .thumbs li").removeClass("active");
+			$(".thumbs-container .thumbs li:nth-child("+1+")").addClass("active");	
 
 			
 		});
@@ -2570,11 +2416,11 @@
 			$('#viewImg .tab-content .tab-pane').removeClass('in active');
 			$('#viewImg .tab-content .tab-pane#photo').addClass('in active show');   
 
-			$("#demo .carousel-indicators li").removeClass("active");
-			$("#demo .carousel-indicators li:nth-child("+$(this).attr('data-num')+")").addClass("active");
+			$("#slideshow .img-wrapper").removeClass("active");
+			$("#slideshow .img-wrapper:nth-child("+$(this).attr('data-num')+")").addClass("active");
 
-			$("#demo .carousel-inner .carousel-item").removeClass("active");
-			$("#demo .carousel-inner .carousel-item:nth-child("+$(this).attr('data-num')+")").addClass("active");	
+			$(".thumbs-container .thumbs li").removeClass("active");
+			$(".thumbs-container .thumbs li:nth-child("+$(this).attr('data-num')+")").addClass("active");	
  
 			$('.item-span').text($(this).attr("data-num"));   
 		});
@@ -2629,11 +2475,11 @@
 			$(".carouselx").addClass("active");
 			$("#btn-photo").show();  
 
-			$("#demo .carousel-indicators li").removeClass("active");
-			$("#demo .carousel-indicators li:nth-child("+$(this).attr('id')+")").addClass("active");
+			$("#slideshow .img-wrapper").removeClass("active");
+			$("#slideshow .img-wrapper:nth-child("+$(this).attr('id')+")").addClass("active"); 
 			
-			$("#demo .carousel-inner img").removeClass("active");
-			$("#demo .carousel-inner img:nth-child("+$(this).attr('id')+")").addClass("active");
+			$(".thumbs-container .thumbs li").removeClass("active");
+			$(".thumbs-container .thumbs li:nth-child("+$(this).attr('id')+")").addClass("active");
 			
 			$('.item-span').text($(this).attr('id'));   
 			
